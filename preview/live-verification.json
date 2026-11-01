@@ -1,0 +1,98 @@
+{
+  "indexStatus": 200,
+  "homeStatus": 200,
+  "apps": [
+    {
+      "slug": "cpa-books-erp-financial-statements-report",
+      "status": 200,
+      "listed": true,
+      "homepageLinked": true,
+      "brand": true,
+      "liveDemo": true,
+      "email": true,
+      "whatsapp": true,
+      "images": 7
+    },
+    {
+      "slug": "cpa-books-erp-ifrs-chart-of-accounts",
+      "status": 200,
+      "listed": true,
+      "homepageLinked": true,
+      "brand": true,
+      "liveDemo": true,
+      "email": true,
+      "whatsapp": true,
+      "images": 4
+    },
+    {
+      "slug": "cpa-books-erp-facility-management",
+      "status": 200,
+      "listed": true,
+      "homepageLinked": true,
+      "brand": true,
+      "liveDemo": true,
+      "email": true,
+      "whatsapp": true,
+      "images": 12
+    },
+    {
+      "slug": "cpa-books-erp-complaint-registration-services",
+      "status": 200,
+      "listed": true,
+      "homepageLinked": true,
+      "brand": true,
+      "liveDemo": true,
+      "email": true,
+      "whatsapp": true,
+      "images": 12
+    },
+    {
+      "slug": "cpa-books-erp-fire-alarm-fire-fighting",
+      "status": 200,
+      "listed": true,
+      "homepageLinked": true,
+      "brand": true,
+      "liveDemo": true,
+      "email": true,
+      "whatsapp": true,
+      "images": 11
+    },
+    {
+      "slug": "cpa-books-erp-sequence-manager",
+      "status": 200,
+      "listed": true,
+      "homepageLinked": true,
+      "brand": true,
+      "liveDemo": true,
+      "email": true,
+      "whatsapp": true,
+      "images": 13
+    },
+    {
+      "slug": "cpa-books-erp-restaurant-recipe-costing",
+      "status": 200,
+      "listed": true,
+      "homepageLinked": true,
+      "brand": true,
+      "liveDemo": true,
+      "email": true,
+      "whatsapp": true,
+      "images": 11
+    },
+    {
+      "slug": "cpa-books-erp-switchgear-manufacturing",
+      "status": 200,
+      "listed": true,
+      "homepageLinked": true,
+      "brand": true,
+      "liveDemo": true,
+      "email": true,
+      "whatsapp": true,
+      "images": 12
+    }
+  ],
+  "checkedAssets": 78,
+  "assetErrors": [],
+  "oldLinksOnIndex": false,
+  "oldLinksOnHomepage": false
+}

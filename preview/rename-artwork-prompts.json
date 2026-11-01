@@ -1,0 +1,50 @@
+[
+  {
+    "path": "smart_coa_builder/static/description/banner.png",
+    "method": "built-in image_gen",
+    "prompt": "Precise text-localization edit of ONLY the provided single app banner. The new and ONLY product display name is exactly \"Smart Chart of Accounts Manager\". Replace old PRODUCT NAME labels: IFRS Chart of Accounts with \"Smart Chart of Accounts Manager\". Keep the separate publisher brand \"CPA Books ERP\" exactly unchanged. Keep ALL other factual text, ALL figures, ALL table rows, ALL numbers, workflow names and code examples unchanged. Preserve the exact existing palette, layout, diagrams and aspect ratio. Adjust ONLY title typography size or line wrapping to fit the full new display name legibly. No new logos, slogans or names of other applications. Do not alter feature descriptions; technical codes like FAFF/00012 or CRN numbers remain unchanged."
+  },
+  {
+    "path": "recipe_library_pro/static/description/banner.png",
+    "method": "built-in image_gen",
+    "prompt": "Precise text-localization edit of ONLY the provided single app banner. The new and ONLY product display name is exactly \"Recipe Library Management\". Replace old PRODUCT NAME labels: Recipe Book and Restaurant Recipe Costing with \"Recipe Library Management\". Keep the separate publisher brand \"CPA Books ERP\" exactly unchanged. Keep ALL other factual text, ALL figures, ALL table rows, ALL numbers, workflow names and code examples unchanged. Preserve the exact existing palette, layout, diagrams and aspect ratio. Adjust ONLY title typography size or line wrapping to fit the full new display name legibly. No new logos, slogans or names of other applications. Do not alter feature descriptions; technical codes like FAFF/00012 or CRN numbers remain unchanged."
+  },
+  {
+    "path": "switchgear_manager_pro/static/description/banner.png",
+    "method": "built-in image_gen",
+    "prompt": "Precise text-localization edit of ONLY the provided single app banner. The new and ONLY product display name is exactly \"Switchgear Management System\". Replace old PRODUCT NAME labels: Switchgear (product title) and Switchgear Manufacturing (footer) with \"Switchgear Management System\". Keep the separate publisher brand \"CPA Books ERP\" exactly unchanged. Keep ALL other factual text, ALL figures, ALL table rows, ALL numbers, workflow names and code examples unchanged. Preserve the exact existing palette, layout, diagrams and aspect ratio. Adjust ONLY title typography size or line wrapping to fit the full new display name legibly. No new logos, slogans or names of other applications. Do not alter feature descriptions; technical codes like FAFF/00012 or CRN numbers remain unchanged."
+  },
+  {
+    "path": "smart_sequence_engine/static/description/banner.png",
+    "method": "built-in image_gen",
+    "prompt": "Precise text-localization edit of ONLY the provided single app banner. The new and ONLY product display name is exactly \"Advanced Sequence Manager\". Replace old PRODUCT NAME labels: Re-Sequences (main title and panel title) with \"Advanced Sequence Manager\". Keep the separate publisher brand \"CPA Books ERP\" exactly unchanged. Keep ALL other factual text, ALL figures, ALL table rows, ALL numbers, workflow names and code examples unchanged. Preserve the exact existing palette, layout, diagrams and aspect ratio. Adjust ONLY title typography size or line wrapping to fit the full new display name legibly. No new logos, slogans or names of other applications. Do not alter feature descriptions; technical codes like FAFF/00012 or CRN numbers remain unchanged."
+  },
+  {
+    "path": "financial_audit_suite/static/description/banner.png",
+    "method": "built-in image_gen",
+    "prompt": "Precise text-localization edit of ONLY the provided single app banner. The new and ONLY product display name is exactly \"Financial Audit & Reporting\". Replace old PRODUCT NAME labels: Audited Financials (main title) with \"Financial Audit & Reporting\". Keep the separate publisher brand \"CPA Books ERP\" exactly unchanged. Keep ALL other factual text, ALL figures, ALL table rows, ALL numbers, workflow names and code examples unchanged. Preserve the exact existing palette, layout, diagrams and aspect ratio. Adjust ONLY title typography size or line wrapping to fit the full new display name legibly. No new logos, slogans or names of other applications. Do not alter feature descriptions; technical codes like FAFF/00012 or CRN numbers remain unchanged."
+  },
+  {
+    "path": "fire_alarm_manager/static/description/banner.png",
+    "method": "built-in image_gen",
+    "prompt": "Precise text-localization edit of ONLY the provided single app banner. The new and ONLY product display name is exactly \"Fire Alarm Management System\". Replace old PRODUCT NAME labels: FAFF (main product headline only) with \"Fire Alarm Management System\". Keep the separate publisher brand \"CPA Books ERP\" exactly unchanged. Keep ALL other factual text, ALL figures, ALL table rows, ALL numbers, workflow names and code examples unchanged. Preserve the exact existing palette, layout, diagrams and aspect ratio. Adjust ONLY title typography size or line wrapping to fit the full new display name legibly. No new logos, slogans or names of other applications. Do not alter feature descriptions; technical codes like FAFF/00012 or CRN numbers remain unchanged."
+  },
+  {
+    "path": "facility_ops_manager/static/description/banner.png",
+    "method": "built-in image_gen",
+    "prompt": "Edit only this supplied banner. The publisher brand stays exactly \"CPA Books ERP\". Rename the product to exactly \"Facility Operations Management\". Replace the large \"CAFM\" heading and the bottom \"FACILITY MANAGEMENT\" label with \"Facility Operations Management\"; wrap the main heading across lines if necessary. Preserve ALL other text, numbers, table data, workflow labels, artwork, colors and aspect ratio. Do not add any other names or slogans."
+  },
+  {
+    "path": "field_service_hub/static/description/banner.png",
+    "method": "built-in image_gen",
+    "prompt": "Edit only this supplied banner. The publisher brand stays exactly \"CPA Books ERP\". Rename the product to exactly \"Field Service Management\". Replace BOTH occurrences of \"Complaint Registration Services\" (top subtitle and footer) with \"Field Service Management\". Keep the large marketing headline \"Every complaint, tracked to done.\" unchanged. Preserve ALL other text, numbers, table data, workflow labels, artwork, colors and aspect ratio. Do not add any other names or slogans."
+  },
+  {
+    "paths": [
+      "financial_audit_suite/static/description/icon.png",
+      "financial_audit_suite/static/description/logo.png"
+    ],
+    "method": "built-in image_gen",
+    "prompt": "Edit ONLY this supplied square app icon. Replace the words \"Audited Financials (AFG)\" at the bottom with the exact new application display name \"Financial Audit & Reporting\", arranged on three readable lines. Preserve the document, charts, magnifying glass, check mark, rounded-square silhouette, purple palette and white surrounding background. Keep square aspect ratio. No other text or logos."
+  }
+]
