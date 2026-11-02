@@ -15,6 +15,8 @@ Execute → Test → Handover → Invoice → Payment.
     'live_test_url': 'https://cpabookserp.com/contactus',
     'support': 'info.cpabooks@gmail.com',
     'license': 'OPL-1',
+    'price': 200.00,
+    'currency': 'USD',
     'images': ['static/description/banner.png'],
     'depends': [
         'crm',

@@ -13,6 +13,8 @@
     'live_test_url': 'https://cpabookserp.com/contactus',
     'support': 'info.cpabooks@gmail.com',
     'license': 'OPL-1',
+    'price': 299.00,
+    'currency': 'USD',
     'images': ['static/description/banner.png'],
     'depends': [
         'maintenance',
