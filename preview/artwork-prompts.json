@@ -1,0 +1,278 @@
+{
+  "method": "built-in image_gen; no CLI/API fallback",
+  "banners": [
+    {
+      "path": "financial_audit_suite/static/description/banner.png",
+      "method": "built-in image_gen",
+      "prompt": "Edit this Odoo app store banner. Replace ALL Saaskul / SAASKUL branding with exact text \"CPA Books ERP\". For audited financials also add that brand prominently. Keep app name and all factual copy, numbers, badges, table data and process labels. Redesign with a distinct premium midnight navy, sapphire blue, ice white; editorial financial report aesthetic and fresh readable layout. Wide 2:1 composition, crisp professionally typeset text, enough spacing, no invented features."
+    },
+    {
+      "path": "smart_coa_builder/static/description/banner.png",
+      "method": "built-in image_gen",
+      "prompt": "Edit this Odoo app store banner. Replace ALL Saaskul / SAASKUL branding with exact text \"CPA Books ERP\". For audited financials also add that brand prominently. Keep app name and all factual copy, numbers, badges, table data and process labels. Redesign with a distinct premium deep aubergine, lavender and pearl; precise hierarchy diagram aesthetic and fresh readable layout. Wide 2:1 composition, crisp professionally typeset text, enough spacing, no invented features.",
+      "correction_prompt": "Precise text correction of the single supplied edit target image. Remove both occurrences of 'FOR AUDITED FINANCIALS', replacing each with 'IFRS CHART OF ACCOUNTS'. Keep EVERY other word, all figures, numbers, diagrams, layout and colors unchanged. This asset is ONLY for chart_of_accounts. Do not include or reference any other app. Brand remains exactly CPA Books ERP."
+    },
+    {
+      "path": "facility_ops_manager/static/description/banner.png",
+      "method": "built-in image_gen",
+      "prompt": "Edit this Odoo app store banner. Replace ALL Saaskul / SAASKUL branding with exact text \"CPA Books ERP\". For audited financials also add that brand prominently. Keep app name and all factual copy, numbers, badges, table data and process labels. Redesign with a distinct premium forest green, sage and warm ivory; architectural operational dashboard aesthetic and fresh readable layout. Wide 2:1 composition, crisp professionally typeset text, enough spacing, no invented features.",
+      "correction_prompt": "Precise text correction of the single supplied edit target image. Replace the bottom-left 'AUDITED FINANCIALS' with 'FACILITY MANAGEMENT'. Add a prominent 'CAFM' subtitle under the large CPA Books ERP headline, keeping spacing readable. Keep EVERY other word, all figures, numbers, diagrams, layout and colors unchanged. This asset is ONLY for facility_management. Do not include or reference any other app. Brand remains exactly CPA Books ERP."
+    },
+    {
+      "path": "field_service_hub/static/description/banner.png",
+      "method": "built-in image_gen",
+      "prompt": "Edit this Odoo app store banner. Replace ALL Saaskul / SAASKUL branding with exact text \"CPA Books ERP\". For audited financials also add that brand prominently. Keep app name and all factual copy, numbers, badges, table data and process labels. Redesign with a distinct premium marine blue, sky blue and white; service desk workflow aesthetic and fresh readable layout. Wide 2:1 composition, crisp professionally typeset text, enough spacing, no invented features.",
+      "correction_prompt": "Precise text correction of the single supplied edit target image. Replace the bottom 'Audited Financials' label with 'Complaint Registration Services'. Keep EVERY other word, all figures, numbers, diagrams, layout and colors unchanged. This asset is ONLY for field_service. Do not include or reference any other app. Brand remains exactly CPA Books ERP."
+    },
+    {
+      "path": "smart_sequence_engine/static/description/banner.png",
+      "method": "built-in image_gen",
+      "prompt": "Edit this Odoo app store banner. Replace ALL Saaskul / SAASKUL branding with exact text \"CPA Books ERP\". For audited financials also add that brand prominently. Keep app name and all factual copy, numbers, badges, table data and process labels. Redesign with a distinct premium charcoal, copper and cream; organized document control aesthetic and fresh readable layout. Wide 2:1 composition, crisp professionally typeset text, enough spacing, no invented features.",
+      "correction_prompt": "Precise text correction of the single supplied edit target image. Replace the words 'AUDITED FINANCIALS' on the binder at bottom right with 'DOCUMENT CONTROL'. Keep EVERY other word, all figures, numbers, diagrams, layout and colors unchanged. This asset is ONLY for re_sequences. Do not include or reference any other app. Brand remains exactly CPA Books ERP."
+    },
+    {
+      "path": "recipe_library_pro/static/description/banner.png",
+      "method": "built-in image_gen",
+      "prompt": "Edit this Odoo app store banner. Replace ALL Saaskul / SAASKUL branding with exact text \"CPA Books ERP\". For audited financials also add that brand prominently. Keep app name and all factual copy, numbers, badges, table data and process labels. Redesign with a distinct premium deep olive, pistachio and warm cream; culinary editorial aesthetic and fresh readable layout. Wide 2:1 composition, crisp professionally typeset text, enough spacing, no invented features.",
+      "correction_prompt": "Precise text correction of the single supplied edit target image. Replace the bottom-left 'FOR AUDITED FINANCIALS' label with 'RESTAURANT RECIPE COSTING'. Keep EVERY other word, all figures, numbers, diagrams, layout and colors unchanged. This asset is ONLY for recipe_book. Do not include or reference any other app. Brand remains exactly CPA Books ERP."
+    },
+    {
+      "path": "switchgear_manager_pro/static/description/banner.png",
+      "method": "built-in image_gen",
+      "prompt": "Edit this Odoo app store banner. Replace ALL Saaskul / SAASKUL branding with exact text \"CPA Books ERP\". For audited financials also add that brand prominently. Keep app name and all factual copy, numbers, badges, table data and process labels. Redesign with a distinct premium midnight blue, electric cyan and silver; industrial engineering aesthetic and fresh readable layout. Wide 2:1 composition, crisp professionally typeset text, enough spacing, no invented features.",
+      "correction_prompt": "Precise text correction of the single supplied edit target image. Replace the bottom 'AUDITED FINANCIALS' label with 'SWITCHGEAR MANUFACTURING'. Keep EVERY other word, all figures, numbers, diagrams, layout and colors unchanged. This asset is ONLY for switchgear. Do not include or reference any other app. Brand remains exactly CPA Books ERP."
+    },
+    {
+      "path": "fire_alarm_manager/static/description/banner.png",
+      "method": "built-in image_gen",
+      "prompt": "Edit this Odoo app marketing banner. Replace every Saaskul / SAASKUL with exact brand CPA Books ERP. Keep FAFF and every other fact, label, count, UI value and descriptive sentence unchanged. Redesign the layout as refined fire safety software marketing, oxblood burgundy and coral with ivory, generous spacing, crisp readable text. Keep wide 2:1 aspect. Return final banner."
+    }
+  ],
+  "feature_images": [
+    {
+      "path": "facility_ops_manager/static/description/01_operations_dashboard.png",
+      "prompt": "Use case: text-localization. Edit only the provided CAFM feature image for CPA Books ERP. Replace any Saaskul/SAASKUL display branding with exact 'CPA Books ERP'; replace 'SAASKUL FACILITIES LLC' with 'CPA Books ERP'; replace browser address bar content with 'CPA Books ERP | CAFM preview' (this is a label, no fake URL). Replace avatar SK with CP. Apply forest green / sage theme to decorative background, navigation and accent colors, keeping green/red status meanings. Preserve ALL app content, every table row, value, amount, date, caption, diagram, and feature unchanged and readable. Do not add any other application names or slogans. Do not add Audited Financials. Preserve original aspect ratio, framing and all content.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "facility_ops_manager/static/description/02_amc_contract.png",
+      "prompt": "Use case: text-localization. Edit only the provided CAFM feature image for CPA Books ERP. Replace any Saaskul/SAASKUL display branding with exact 'CPA Books ERP'; replace 'SAASKUL FACILITIES LLC' with 'CPA Books ERP'; replace browser address bar content with 'CPA Books ERP | CAFM preview' (this is a label, no fake URL). Replace avatar SK with CP. Apply forest green / sage theme to decorative background, navigation and accent colors, keeping green/red status meanings. Preserve ALL app content, every table row, value, amount, date, caption, diagram, and feature unchanged and readable. Do not add any other application names or slogans. Do not add Audited Financials. Preserve original aspect ratio, framing and all content.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "facility_ops_manager/static/description/03_monthly_billing_table.png",
+      "prompt": "Use case: text-localization. Edit only the provided CAFM feature image for CPA Books ERP. Replace any Saaskul/SAASKUL display branding with exact 'CPA Books ERP'; replace 'SAASKUL FACILITIES LLC' with 'CPA Books ERP'; replace browser address bar content with 'CPA Books ERP | CAFM preview' (this is a label, no fake URL). Replace avatar SK with CP. Apply forest green / sage theme to decorative background, navigation and accent colors, keeping green/red status meanings. Preserve ALL app content, every table row, value, amount, date, caption, diagram, and feature unchanged and readable. Do not add any other application names or slogans. Do not add Audited Financials. Preserve original aspect ratio, framing and all content.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "facility_ops_manager/static/description/04_contract_orders.png",
+      "prompt": "Use case: text-localization. Edit only the provided CAFM feature image for CPA Books ERP. Replace any Saaskul/SAASKUL display branding with exact 'CPA Books ERP'; replace 'SAASKUL FACILITIES LLC' with 'CPA Books ERP'; replace browser address bar content with 'CPA Books ERP | CAFM preview' (this is a label, no fake URL). Replace avatar SK with CP. Apply forest green / sage theme to decorative background, navigation and accent colors, keeping green/red status meanings. Preserve ALL app content, every table row, value, amount, date, caption, diagram, and feature unchanged and readable. Do not add any other application names or slogans. Do not add Audited Financials. Preserve original aspect ratio, framing and all content.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "facility_ops_manager/static/description/05_service_call.png",
+      "prompt": "Use case: text-localization. Edit only the provided CAFM feature image for CPA Books ERP. Replace any Saaskul/SAASKUL display branding with exact 'CPA Books ERP'; replace 'SAASKUL FACILITIES LLC' with 'CPA Books ERP'; replace browser address bar content with 'CPA Books ERP | CAFM preview' (this is a label, no fake URL). Replace avatar SK with CP. Apply forest green / sage theme to decorative background, navigation and accent colors, keeping green/red status meanings. Preserve ALL app content, every table row, value, amount, date, caption, diagram, and feature unchanged and readable. Do not add any other application names or slogans. Do not add Audited Financials. Preserve original aspect ratio, framing and all content.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "facility_ops_manager/static/description/06_var_work.png",
+      "prompt": "Use case: text-localization. Edit only the provided CAFM feature image for CPA Books ERP. Replace any Saaskul/SAASKUL display branding with exact 'CPA Books ERP'; replace 'SAASKUL FACILITIES LLC' with 'CPA Books ERP'; replace browser address bar content with 'CPA Books ERP | CAFM preview' (this is a label, no fake URL). Replace avatar SK with CP. Apply forest green / sage theme to decorative background, navigation and accent colors, keeping green/red status meanings. Preserve ALL app content, every table row, value, amount, date, caption, diagram, and feature unchanged and readable. Do not add any other application names or slogans. Do not add Audited Financials. Preserve original aspect ratio, framing and all content.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "facility_ops_manager/static/description/07_ppm_planner.png",
+      "prompt": "Use case: text-localization. Edit only the provided CAFM feature image for CPA Books ERP. Replace any Saaskul/SAASKUL display branding with exact 'CPA Books ERP'; replace 'SAASKUL FACILITIES LLC' with 'CPA Books ERP'; replace browser address bar content with 'CPA Books ERP | CAFM preview' (this is a label, no fake URL). Replace avatar SK with CP. Apply forest green / sage theme to decorative background, navigation and accent colors, keeping green/red status meanings. Preserve ALL app content, every table row, value, amount, date, caption, diagram, and feature unchanged and readable. Do not add any other application names or slogans. Do not add Audited Financials. Preserve original aspect ratio, framing and all content.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "facility_ops_manager/static/description/08_invoice_follow_up.png",
+      "prompt": "Use case: text-localization. Edit only the provided CAFM feature image for CPA Books ERP. Replace any Saaskul/SAASKUL display branding with exact 'CPA Books ERP'; replace 'SAASKUL FACILITIES LLC' with 'CPA Books ERP'; replace browser address bar content with 'CPA Books ERP | CAFM preview' (this is a label, no fake URL). Replace avatar SK with CP. Apply forest green / sage theme to decorative background, navigation and accent colors, keeping green/red status meanings. Preserve ALL app content, every table row, value, amount, date, caption, diagram, and feature unchanged and readable. Do not add any other application names or slogans. Do not add Audited Financials. Preserve original aspect ratio, framing and all content.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "facility_ops_manager/static/description/09_invoice_and_soa.png",
+      "prompt": "Use case: text-localization. Edit only the provided CAFM feature image for CPA Books ERP. Replace any Saaskul/SAASKUL display branding with exact 'CPA Books ERP'; replace 'SAASKUL FACILITIES LLC' with 'CPA Books ERP'; replace browser address bar content with 'CPA Books ERP | CAFM preview' (this is a label, no fake URL). Replace avatar SK with CP. Apply forest green / sage theme to decorative background, navigation and accent colors, keeping green/red status meanings. Preserve ALL app content, every table row, value, amount, date, caption, diagram, and feature unchanged and readable. Do not add any other application names or slogans. Do not add Audited Financials. Preserve original aspect ratio, framing and all content.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "field_service_hub/static/description/01_dashboard.png",
+      "prompt": "Precise text-localization edit of this single Field Service / Complaint Registration Services screenshot. Replace EVERY 'Saaskul Demo LLC' or 'SAASKUL' display branding with exact 'CPA Books ERP'. Replace service@saaskul-demo.ae with info.cpabooks@gmail.com if present. Keep everything else exactly unchanged: ALL rows, columns, amounts, dates, labels, charts, sidebar, all tiny text, every UI feature, colors and layout. Do not redesign the application or add/remove features. Preserve original aspect ratio. Only edit branding text areas, no other application names.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "field_service_hub/static/description/02_processing_cycle.png",
+      "prompt": "Precise text-localization edit of this single Field Service / Complaint Registration Services screenshot. Replace EVERY 'Saaskul Demo LLC' or 'SAASKUL' display branding with exact 'CPA Books ERP'. Replace service@saaskul-demo.ae with info.cpabooks@gmail.com if present. Keep everything else exactly unchanged: ALL rows, columns, amounts, dates, labels, charts, sidebar, all tiny text, every UI feature, colors and layout. Do not redesign the application or add/remove features. Preserve original aspect ratio. Only edit branding text areas, no other application names.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "field_service_hub/static/description/03_crn_registration.png",
+      "prompt": "Precise text-localization edit of this single Field Service / Complaint Registration Services screenshot. Replace EVERY 'Saaskul Demo LLC' or 'SAASKUL' display branding with exact 'CPA Books ERP'. Replace service@saaskul-demo.ae with info.cpabooks@gmail.com if present. Keep everything else exactly unchanged: ALL rows, columns, amounts, dates, labels, charts, sidebar, all tiny text, every UI feature, colors and layout. Do not redesign the application or add/remove features. Preserve original aspect ratio. Only edit branding text areas, no other application names.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "field_service_hub/static/description/04_site_visit_to_wip.png",
+      "prompt": "Precise text-localization edit of this single Field Service / Complaint Registration Services screenshot. Replace EVERY 'Saaskul Demo LLC' or 'SAASKUL' display branding with exact 'CPA Books ERP'. Replace service@saaskul-demo.ae with info.cpabooks@gmail.com if present. Keep everything else exactly unchanged: ALL rows, columns, amounts, dates, labels, charts, sidebar, all tiny text, every UI feature, colors and layout. Do not redesign the application or add/remove features. Preserve original aspect ratio. Only edit branding text areas, no other application names.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "field_service_hub/static/description/05_tmc_internal_costs.png",
+      "prompt": "Precise text-localization edit of this single Field Service / Complaint Registration Services screenshot. Replace EVERY 'Saaskul Demo LLC' or 'SAASKUL' display branding with exact 'CPA Books ERP'. Replace service@saaskul-demo.ae with info.cpabooks@gmail.com if present. Keep everything else exactly unchanged: ALL rows, columns, amounts, dates, labels, charts, sidebar, all tiny text, every UI feature, colors and layout. Do not redesign the application or add/remove features. Preserve original aspect ratio. Only edit branding text areas, no other application names.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "field_service_hub/static/description/06_store_material_requests.png",
+      "prompt": "Precise text-localization edit of this single Field Service / Complaint Registration Services screenshot. Replace EVERY 'Saaskul Demo LLC' or 'SAASKUL' display branding with exact 'CPA Books ERP'. Replace service@saaskul-demo.ae with info.cpabooks@gmail.com if present. Keep everything else exactly unchanged: ALL rows, columns, amounts, dates, labels, charts, sidebar, all tiny text, every UI feature, colors and layout. Do not redesign the application or add/remove features. Preserve original aspect ratio. Only edit branding text areas, no other application names.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "field_service_hub/static/description/07_job_completion_report.png",
+      "prompt": "Precise text-localization edit of this single Field Service / Complaint Registration Services screenshot. Replace EVERY 'Saaskul Demo LLC' or 'SAASKUL' display branding with exact 'CPA Books ERP'. Replace service@saaskul-demo.ae with info.cpabooks@gmail.com if present. Keep everything else exactly unchanged: ALL rows, columns, amounts, dates, labels, charts, sidebar, all tiny text, every UI feature, colors and layout. Do not redesign the application or add/remove features. Preserve original aspect ratio. Only edit branding text areas, no other application names.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "field_service_hub/static/description/08_service_charts.png",
+      "prompt": "Precise text-localization edit of this single Field Service / Complaint Registration Services screenshot. Replace EVERY 'Saaskul Demo LLC' or 'SAASKUL' display branding with exact 'CPA Books ERP'. Replace service@saaskul-demo.ae with info.cpabooks@gmail.com if present. Keep everything else exactly unchanged: ALL rows, columns, amounts, dates, labels, charts, sidebar, all tiny text, every UI feature, colors and layout. Do not redesign the application or add/remove features. Preserve original aspect ratio. Only edit branding text areas, no other application names.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "field_service_hub/static/description/09_crn_list.png",
+      "prompt": "Precise text-localization edit of this single Field Service / Complaint Registration Services screenshot. Replace EVERY 'Saaskul Demo LLC' or 'SAASKUL' display branding with exact 'CPA Books ERP'. Replace service@saaskul-demo.ae with info.cpabooks@gmail.com if present. Keep everything else exactly unchanged: ALL rows, columns, amounts, dates, labels, charts, sidebar, all tiny text, every UI feature, colors and layout. Do not redesign the application or add/remove features. Preserve original aspect ratio. Only edit branding text areas, no other application names.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "fire_alarm_manager/static/description/01_operations_dashboard.png",
+      "prompt": "Use case text-localization. Edit this single Fire Alarm & Fire Fighting / FAFF feature image. Replace 'SAASKUL FIRE & SAFETY LLC' with exact 'CPA Books ERP'. Change blue decorative background and navigation/accent theme to burgundy and coral. Keep all business content, labels, rows, amounts, dates, figures, signatures, tiny text and layout exactly unchanged and readable. Do not add text, slogans or other application names. Preserve original aspect ratio.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "fire_alarm_manager/static/description/07_handover_note.png",
+      "prompt": "Use case text-localization. Edit this single Fire Alarm & Fire Fighting / FAFF feature image. Replace 'SAASKUL FIRE & SAFETY LLC' with exact 'CPA Books ERP'. Change blue decorative background and navigation/accent theme to burgundy and coral. Keep all business content, labels, rows, amounts, dates, figures, signatures, tiny text and layout exactly unchanged and readable. Do not add text, slogans or other application names. Preserve original aspect ratio.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "smart_sequence_engine/static/description/01_resequences_list.png",
+      "prompt": "Text-localization and color theme edit of ONLY this supplied Re-Sequences feature slide. Replace ALL Saaskul display branding with exact 'CPA Books ERP'; replace 'Saaskul Trading LLC' with 'CPA Books ERP'; replace browser address bar with 'CPA Books ERP | Sequence Manager preview' (no invented URL). Switch decorative background/accent colors from purple/cyan to charcoal/copper/cream. Preserve every word of feature copy apart from brand substitution, ALL table rows, ALL document pattern examples including SKL unchanged, dates, numbers, diagrams, layout and all data. Keep app name Re-Sequences. No new slogans or names. Do not add Audited Financials or CAFM. Preserve original aspect ratio.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "smart_sequence_engine/static/description/02_reset_company_prefix.png",
+      "prompt": "Text-localization and color theme edit of ONLY this supplied Re-Sequences feature slide. Replace ALL Saaskul display branding with exact 'CPA Books ERP'; replace 'Saaskul Trading LLC' with 'CPA Books ERP'; replace browser address bar with 'CPA Books ERP | Sequence Manager preview' (no invented URL). Switch decorative background/accent colors from purple/cyan to charcoal/copper/cream. Preserve every word of feature copy apart from brand substitution, ALL table rows, ALL document pattern examples including SKL unchanged, dates, numbers, diagrams, layout and all data. Keep app name Re-Sequences. No new slogans or names. Do not add Audited Financials or CAFM. Preserve original aspect ratio.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "smart_sequence_engine/static/description/03_number_formats.png",
+      "prompt": "Text-localization and color theme edit of ONLY this supplied Re-Sequences feature slide. Replace ALL Saaskul display branding with exact 'CPA Books ERP'; replace 'Saaskul Trading LLC' with 'CPA Books ERP'; replace browser address bar with 'CPA Books ERP | Sequence Manager preview' (no invented URL). Switch decorative background/accent colors from purple/cyan to charcoal/copper/cream. Preserve every word of feature copy apart from brand substitution, ALL table rows, ALL document pattern examples including SKL unchanged, dates, numbers, diagrams, layout and all data. Keep app name Re-Sequences. No new slogans or names. Do not add Audited Financials or CAFM. Preserve original aspect ratio.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "smart_sequence_engine/static/description/04_document_coverage.png",
+      "prompt": "Text-localization and color theme edit of ONLY this supplied Re-Sequences feature slide. Replace ALL Saaskul display branding with exact 'CPA Books ERP'; replace 'Saaskul Trading LLC' with 'CPA Books ERP'; replace browser address bar with 'CPA Books ERP | Sequence Manager preview' (no invented URL). Switch decorative background/accent colors from purple/cyan to charcoal/copper/cream. Preserve every word of feature copy apart from brand substitution, ALL table rows, ALL document pattern examples including SKL unchanged, dates, numbers, diagrams, layout and all data. Keep app name Re-Sequences. No new slogans or names. Do not add Audited Financials or CAFM. Preserve original aspect ratio.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "smart_sequence_engine/static/description/05_lock_protection.png",
+      "prompt": "Text-localization and color theme edit of ONLY this supplied Re-Sequences feature slide. Replace ALL Saaskul display branding with exact 'CPA Books ERP'; replace 'Saaskul Trading LLC' with 'CPA Books ERP'; replace browser address bar with 'CPA Books ERP | Sequence Manager preview' (no invented URL). Switch decorative background/accent colors from purple/cyan to charcoal/copper/cream. Preserve every word of feature copy apart from brand substitution, ALL table rows, ALL document pattern examples including SKL unchanged, dates, numbers, diagrams, layout and all data. Keep app name Re-Sequences. No new slogans or names. Do not add Audited Financials or CAFM. Preserve original aspect ratio.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "smart_sequence_engine/static/description/06_backdated_documents.png",
+      "prompt": "Edit ONLY supplied Re-Sequences slide: replace bottom-left 'Saaskul Re-Sequences' with 'CPA Books ERP Re-Sequences'. Change decorative purple/cyan theme to charcoal/copper/cream. Keep every other word, date and document number EXACTLY unchanged. Same aspect ratio and layout. Do not add any other application names or slogans.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "smart_sequence_engine/static/description/07_quotation_revision.png",
+      "prompt": "Text-localization and color theme edit of ONLY this supplied Re-Sequences feature slide. Replace ALL Saaskul display branding with exact 'CPA Books ERP'; replace 'Saaskul Trading LLC' with 'CPA Books ERP'; replace browser address bar with 'CPA Books ERP | Sequence Manager preview' (no invented URL). Switch decorative background/accent colors from purple/cyan to charcoal/copper/cream. Preserve every word of feature copy apart from brand substitution, ALL table rows, ALL document pattern examples including SKL unchanged, dates, numbers, diagrams, layout and all data. Keep app name Re-Sequences. No new slogans or names. Do not add Audited Financials or CAFM. Preserve original aspect ratio.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "smart_sequence_engine/static/description/08_smart_next_number.png",
+      "prompt": "Text-localization and color theme edit of ONLY this supplied Re-Sequences feature slide. Replace ALL Saaskul display branding with exact 'CPA Books ERP'; replace 'Saaskul Trading LLC' with 'CPA Books ERP'; replace browser address bar with 'CPA Books ERP | Sequence Manager preview' (no invented URL). Switch decorative background/accent colors from purple/cyan to charcoal/copper/cream. Preserve every word of feature copy apart from brand substitution, ALL table rows, ALL document pattern examples including SKL unchanged, dates, numbers, diagrams, layout and all data. Keep app name Re-Sequences. No new slogans or names. Do not add Audited Financials or CAFM. Preserve original aspect ratio.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "smart_sequence_engine/static/description/09_multi_company_permissions.png",
+      "prompt": "Text-localization and color theme edit of ONLY this supplied Re-Sequences feature slide. Replace ALL Saaskul display branding with exact 'CPA Books ERP'; replace 'Saaskul Trading LLC' with 'CPA Books ERP'; replace browser address bar with 'CPA Books ERP | Sequence Manager preview' (no invented URL). Switch decorative background/accent colors from purple/cyan to charcoal/copper/cream. Preserve every word of feature copy apart from brand substitution, ALL table rows, ALL document pattern examples including SKL unchanged, dates, numbers, diagrams, layout and all data. Keep app name Re-Sequences. No new slogans or names. Do not add Audited Financials or CAFM. Preserve original aspect ratio.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "recipe_library_pro/static/description/01_menu_book.png",
+      "prompt": "Text-localization and theme edit of ONLY this supplied Recipe Book feature slide. Replace ALL Saaskul display branding with exact 'CPA Books ERP'; replace 'Saaskul Kitchen LLC' with 'CPA Books ERP'; replace browser address bar with 'CPA Books ERP | Recipe Book preview' (no invented URL). Change orange decorative/nav theme to deep olive/pistachio/warm cream, while KEEPING green/orange/red functional status colors and descriptions unchanged. Preserve ALL feature copy except branding substitution, every ingredient, table row, amount, numeric value, date, formula and feature exactly. Same layout, original aspect ratio, all content readable. Keep Recipe Book app name, no new slogans or other application names. Do not add Audited Financials or CAFM.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "recipe_library_pro/static/description/02_recipe_card.png",
+      "prompt": "Text-localization and theme edit of ONLY this supplied Recipe Book feature slide. Replace ALL Saaskul display branding with exact 'CPA Books ERP'; replace 'Saaskul Kitchen LLC' with 'CPA Books ERP'; replace browser address bar with 'CPA Books ERP | Recipe Book preview' (no invented URL). Change orange decorative/nav theme to deep olive/pistachio/warm cream, while KEEPING green/orange/red functional status colors and descriptions unchanged. Preserve ALL feature copy except branding substitution, every ingredient, table row, amount, numeric value, date, formula and feature exactly. Same layout, original aspect ratio, all content readable. Keep Recipe Book app name, no new slogans or other application names. Do not add Audited Financials or CAFM.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "recipe_library_pro/static/description/03_dashboard.png",
+      "prompt": "Text-localization and theme edit of ONLY this supplied Recipe Book feature slide. Replace ALL Saaskul display branding with exact 'CPA Books ERP'; replace 'Saaskul Kitchen LLC' with 'CPA Books ERP'; replace browser address bar with 'CPA Books ERP | Recipe Book preview' (no invented URL). Change orange decorative/nav theme to deep olive/pistachio/warm cream, while KEEPING green/orange/red functional status colors and descriptions unchanged. Preserve ALL feature copy except branding substitution, every ingredient, table row, amount, numeric value, date, formula and feature exactly. Same layout, original aspect ratio, all content readable. Keep Recipe Book app name, no new slogans or other application names. Do not add Audited Financials or CAFM.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "recipe_library_pro/static/description/04_prep_sub_recipes.png",
+      "prompt": "Text-localization and theme edit of ONLY this supplied Recipe Book feature slide. Replace ALL Saaskul display branding with exact 'CPA Books ERP'; replace 'Saaskul Kitchen LLC' with 'CPA Books ERP'; replace browser address bar with 'CPA Books ERP | Recipe Book preview' (no invented URL). Change orange decorative/nav theme to deep olive/pistachio/warm cream, while KEEPING green/orange/red functional status colors and descriptions unchanged. Preserve ALL feature copy except branding substitution, every ingredient, table row, amount, numeric value, date, formula and feature exactly. Same layout, original aspect ratio, all content readable. Keep Recipe Book app name, no new slogans or other application names. Do not add Audited Financials or CAFM.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "recipe_library_pro/static/description/05_consumption_analysis.png",
+      "prompt": "Text-localization and theme edit of ONLY this supplied Recipe Book feature slide. Replace ALL Saaskul display branding with exact 'CPA Books ERP'; replace 'Saaskul Kitchen LLC' with 'CPA Books ERP'; replace browser address bar with 'CPA Books ERP | Recipe Book preview' (no invented URL). Change orange decorative/nav theme to deep olive/pistachio/warm cream, while KEEPING green/orange/red functional status colors and descriptions unchanged. Preserve ALL feature copy except branding substitution, every ingredient, table row, amount, numeric value, date, formula and feature exactly. Same layout, original aspect ratio, all content readable. Keep Recipe Book app name, no new slogans or other application names. Do not add Audited Financials or CAFM.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "recipe_library_pro/static/description/06_closing_variance.png",
+      "prompt": "Text-localization and theme edit of ONLY this supplied Recipe Book feature slide. Replace ALL Saaskul display branding with exact 'CPA Books ERP'; replace 'Saaskul Kitchen LLC' with 'CPA Books ERP'; replace browser address bar with 'CPA Books ERP | Recipe Book preview' (no invented URL). Change orange decorative/nav theme to deep olive/pistachio/warm cream, while KEEPING green/orange/red functional status colors and descriptions unchanged. Preserve ALL feature copy except branding substitution, every ingredient, table row, amount, numeric value, date, formula and feature exactly. Same layout, original aspect ratio, all content readable. Keep Recipe Book app name, no new slogans or other application names. Do not add Audited Financials or CAFM.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "recipe_library_pro/static/description/07_how_variance_works.png",
+      "prompt": "Text-localization and theme edit of ONLY this supplied Recipe Book feature slide. Replace ALL Saaskul display branding with exact 'CPA Books ERP'; replace 'Saaskul Kitchen LLC' with 'CPA Books ERP'; replace browser address bar with 'CPA Books ERP | Recipe Book preview' (no invented URL). Change orange decorative/nav theme to deep olive/pistachio/warm cream, while KEEPING green/orange/red functional status colors and descriptions unchanged. Preserve ALL feature copy except branding substitution, every ingredient, table row, amount, numeric value, date, formula and feature exactly. Same layout, original aspect ratio, all content readable. Keep Recipe Book app name, no new slogans or other application names. Do not add Audited Financials or CAFM.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "switchgear_manager_pro/static/description/01_processing_cycle.png",
+      "prompt": "Precise branding text replacement in ONLY the supplied Switchgear application screenshot. Replace EVERY occurrence of 'Saaskul' with exact 'CPA Books ERP', including top bar, sidebar, main heading and modal title. Reflow the sidebar label as needed to fit. Keep the app name Switchgear. Preserve ALL other application content, table rows, sidebar items, numbers, dates, labels, diagrams, flow steps, values, status colors, layout and framing EXACTLY. Do not add or remove features or add slogans or names of other applications. Change only branding text areas, keep the dark industrial application theme unchanged. Preserve original aspect ratio.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "switchgear_manager_pro/static/description/02_dashboard.png",
+      "prompt": "Precise branding text replacement in ONLY the supplied Switchgear application screenshot. Replace EVERY occurrence of 'Saaskul' with exact 'CPA Books ERP', including top bar, sidebar, main heading and modal title. Reflow the sidebar label as needed to fit. Keep the app name Switchgear. Preserve ALL other application content, table rows, sidebar items, numbers, dates, labels, diagrams, flow steps, values, status colors, layout and framing EXACTLY. Do not add or remove features or add slogans or names of other applications. Change only branding text areas, keep the dark industrial application theme unchanged. Preserve original aspect ratio.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "switchgear_manager_pro/static/description/03_progress_status.png",
+      "prompt": "Precise branding text replacement in ONLY the supplied Switchgear application screenshot. Replace EVERY occurrence of 'Saaskul' with exact 'CPA Books ERP', including top bar, sidebar, main heading and modal title. Reflow the sidebar label as needed to fit. Keep the app name Switchgear. Preserve ALL other application content, table rows, sidebar items, numbers, dates, labels, diagrams, flow steps, values, status colors, layout and framing EXACTLY. Do not add or remove features or add slogans or names of other applications. Change only branding text areas, keep the dark industrial application theme unchanged. Preserve original aspect ratio.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "switchgear_manager_pro/static/description/04_estimate_to_bom.png",
+      "prompt": "Precise branding text replacement in ONLY the supplied Switchgear application screenshot. Replace EVERY occurrence of 'Saaskul' with exact 'CPA Books ERP', including top bar, sidebar, main heading and modal title. Reflow the sidebar label as needed to fit. Keep the app name Switchgear. Preserve ALL other application content, table rows, sidebar items, numbers, dates, labels, diagrams, flow steps, values, status colors, layout and framing EXACTLY. Do not add or remove features or add slogans or names of other applications. Change only branding text areas, keep the dark industrial application theme unchanged. Preserve original aspect ratio.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "switchgear_manager_pro/static/description/05_mo_pr_qc.png",
+      "prompt": "Precise branding text replacement in ONLY the supplied Switchgear application screenshot. Replace EVERY occurrence of 'Saaskul' with exact 'CPA Books ERP', including top bar, sidebar, main heading and modal title. Reflow the sidebar label as needed to fit. Keep the app name Switchgear. Preserve ALL other application content, table rows, sidebar items, numbers, dates, labels, diagrams, flow steps, values, status colors, layout and framing EXACTLY. Do not add or remove features or add slogans or names of other applications. Change only branding text areas, keep the dark industrial application theme unchanged. Preserve original aspect ratio.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "switchgear_manager_pro/static/description/06_design_documents.png",
+      "prompt": "Precise branding text replacement in ONLY the supplied Switchgear application screenshot. Replace EVERY occurrence of 'Saaskul' with exact 'CPA Books ERP', including top bar, sidebar, main heading and modal title. Reflow the sidebar label as needed to fit. Keep the app name Switchgear. Preserve ALL other application content, table rows, sidebar items, numbers, dates, labels, diagrams, flow steps, values, status colors, layout and framing EXACTLY. Do not add or remove features or add slogans or names of other applications. Change only branding text areas, keep the dark industrial application theme unchanged. Preserve original aspect ratio.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "switchgear_manager_pro/static/description/07_qc_label.png",
+      "prompt": "Precise branding text replacement in ONLY the supplied Switchgear application screenshot. Replace EVERY occurrence of 'Saaskul' with exact 'CPA Books ERP', including top bar, sidebar, main heading and modal title. Reflow the sidebar label as needed to fit. Keep the app name Switchgear. Preserve ALL other application content, table rows, sidebar items, numbers, dates, labels, diagrams, flow steps, values, status colors, layout and framing EXACTLY. Do not add or remove features or add slogans or names of other applications. Change only branding text areas, keep the dark industrial application theme unchanged. Preserve original aspect ratio.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "switchgear_manager_pro/static/description/08_tutorial_wizard.png",
+      "prompt": "Precise branding text replacement in ONLY the supplied Switchgear application screenshot. Replace EVERY occurrence of 'Saaskul' with exact 'CPA Books ERP', including top bar, sidebar, main heading and modal title. Reflow the sidebar label as needed to fit. Keep the app name Switchgear. Preserve ALL other application content, table rows, sidebar items, numbers, dates, labels, diagrams, flow steps, values, status colors, layout and framing EXACTLY. Do not add or remove features or add slogans or names of other applications. Change only branding text areas, keep the dark industrial application theme unchanged. Preserve original aspect ratio.",
+      "method": "built-in image_gen"
+    },
+    {
+      "path": "switchgear_manager_pro/static/description/09_flowchart.png",
+      "prompt": "Precise branding text replacement in ONLY the supplied Switchgear application screenshot. Replace EVERY occurrence of 'Saaskul' with exact 'CPA Books ERP', including top bar, sidebar, main heading and modal title. Reflow the sidebar label as needed to fit. Keep the app name Switchgear. Preserve ALL other application content, table rows, sidebar items, numbers, dates, labels, diagrams, flow steps, values, status colors, layout and framing EXACTLY. Do not add or remove features or add slogans or names of other applications. Change only branding text areas, keep the dark industrial application theme unchanged. Preserve original aspect ratio.",
+      "method": "built-in image_gen"
+    }
+  ]
+}

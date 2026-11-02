@@ -1,0 +1,78 @@
+[
+  {
+    "old": "chart_of_accounts_saaskul",
+    "technical": "smart_coa_builder",
+    "display": "Smart Chart of Accounts Manager",
+    "aliases": [
+      "IFRS Chart of Accounts",
+      "Chart of Accounts"
+    ]
+  },
+  {
+    "old": "recipe_book_saaskul",
+    "technical": "recipe_library_pro",
+    "display": "Recipe Library Management",
+    "aliases": [
+      "Restaurant Recipe Costing",
+      "Recipe Book"
+    ]
+  },
+  {
+    "old": "switchgear_saaskul",
+    "technical": "switchgear_manager_pro",
+    "display": "Switchgear Management System",
+    "aliases": [
+      "Switchgear Manufacturing",
+      "Switchgear"
+    ]
+  },
+  {
+    "old": "re_sequences_saaskul",
+    "technical": "smart_sequence_engine",
+    "display": "Advanced Sequence Manager",
+    "aliases": [
+      "Sequence Manager - Document Numbering",
+      "Document Sequence Manager",
+      "Re-Sequences",
+      "Sequence Manager"
+    ]
+  },
+  {
+    "old": "audited_financials_saaskul",
+    "technical": "financial_audit_suite",
+    "display": "Financial Audit & Reporting",
+    "aliases": [
+      "Audited Financials (AFG)",
+      "Financial Statements Report",
+      "Audited Financials"
+    ]
+  },
+  {
+    "old": "fire_alarm_saaskul",
+    "technical": "fire_alarm_manager",
+    "display": "Fire Alarm Management System",
+    "aliases": [
+      "Fire Alarm & Fire Fighting",
+      "Fire Alarm Fire Fighting"
+    ]
+  },
+  {
+    "old": "facility_management_saaskul",
+    "technical": "facility_ops_manager",
+    "display": "Facility Operations Management",
+    "aliases": [
+      "Facility Management (CAFM)",
+      "Facility Management - CAFM",
+      "Facility Management"
+    ]
+  },
+  {
+    "old": "field_service_saaskul",
+    "technical": "field_service_hub",
+    "display": "Field Service Management",
+    "aliases": [
+      "Complaint Registration Services",
+      "Field Service"
+    ]
+  }
+]
