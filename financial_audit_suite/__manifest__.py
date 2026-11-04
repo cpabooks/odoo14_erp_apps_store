@@ -14,7 +14,7 @@ Equity, Cash Flow, PPE schedule, notes and UAE Corporate Tax.
     'website': 'https://cpabookserp.com',
     'live_test_url': 'https://cpabookserp.com/contactus',
     'license': 'OPL-1',
-    'price': 400.00,
+    'price': 0.00,
     'currency': 'USD',
     'support': 'info.cpabooks@gmail.com',
     'images': [

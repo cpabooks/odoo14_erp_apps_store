@@ -6,7 +6,7 @@
  'category': 'Operations/Restaurant',
  'author': 'CPA Books ERP', 'website': 'https://cpabookserp.com', 'support': 'info.cpabooks@gmail.com',
  'live_test_url': 'https://cpabookserp.com/contactus',
- 'license': 'OPL-1', 'price': 75.00, 'currency': 'USD',
+ 'license': 'OPL-1', 'price': 0.00, 'currency': 'USD',
  'depends': ['base','product','sale_management','stock','purchase'],
  'data': [
    'security/recipe_security.xml','security/ir.model.access.csv',
