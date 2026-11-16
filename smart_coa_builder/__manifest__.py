@@ -16,7 +16,7 @@ balances — on Odoo 14 Community and Enterprise.
     'category': 'Accounting',
     'version': '14.0.1.0.0',
     'license': 'OPL-1',
-    'price': 19.50,
+    'price': 0.00,
     'currency': 'USD',
     'images': [
         'static/description/banner.png',
