@@ -12,7 +12,7 @@ Each letter can be printed with signature and stamp, emailed from the source
 record, shared as WhatsApp text, and kept in a numbered correspondence register.
 Includes 11 editable letter templates.
     """,
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Sales/CRM",
     "author": "CPA Books ERP",
     "website": "https://cpabookserp.com",
@@ -30,7 +30,6 @@ Includes 11 editable letter templates.
         "account",
         "project",
         "mail",
-        "cost_estimate_customer_ld",
     ],
     "data": [
         "security/ir.model.access.csv",
