@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend" inherit_id="web.assets_backend" name="Side Menu Navigator CSS">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/scss"
+                  href="/side_menu_navigator/static/src/scss/sidebar.scss"/>
+        </xpath>
+    </template>
+
+    <template id="assets_js" name="Side Menu Navigator JS">
+        <script type="text/javascript"
+                src="/side_menu_navigator/static/src/js/sidebar.js"/>
+    </template>
+
+    <template id="webclient_ccs_js" inherit_id="web.webclient_bootstrap" name="Side Menu Navigator script">
+        <xpath expr="//t[@t-call-assets='web.assets_backend_prod_only']" position="after">
+            <t t-call-assets="side_menu_navigator.assets_js" t-css="false"/>
+        </xpath>
+    </template>
+</odoo>
