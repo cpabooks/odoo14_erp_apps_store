@@ -17,7 +17,7 @@ not use or copy web_enterprise.
     'category': 'Productivity',
     'version': '19.0.1.0.0',
     'license': 'OPL-1',
-    'price': 15.00,
+    'price': 0.0,
     'currency': 'USD',
     'images': [
         'static/description/banner.png',

@@ -19,7 +19,7 @@ save their own.
     "live_test_url": "https://cpabookserp.com/contactus?name=Live%20Preview%20-%20Client%20Letter%20Generator",
     "support": "info.cpabooks@gmail.com",
     "license": "OPL-1",
-    "price": 19.00,
+    "price": 0.0,
     "currency": "USD",
     "images": [
         "static/description/banner.png",

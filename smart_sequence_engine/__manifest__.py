@@ -19,7 +19,7 @@ Purchase, Inventory, Project and CRM in Odoo 19.
     'category': 'Productivity',
     'version': '19.0.1.63',
     'license': 'OPL-1',
-    'price': 14.50,
+    'price': 0.0,
     'currency': 'USD',
 
     'images': [

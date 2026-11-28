@@ -7,7 +7,7 @@
  'author': 'CPA Books ERP', 'website': 'https://cpabookserp.com', 'support': 'info.cpabooks@gmail.com',
  'live_test_url': 'https://cpabookserp.com/contactus?name=Live%20Preview%20-%20Restaurant%20Recipe%20Costing',
  'license': 'OPL-1',
- 'price': 75.00,
+ 'price': 0.0,
  'currency': 'USD',
  'depends': ['base','product','sale_management','stock','purchase'],
  'data': [
