@@ -29,7 +29,7 @@ Depends only on Accounting (account). No other custom module is required.
     'live_test_url': 'https://cpabookserp.com/contactus',
     'support': 'info.cpabooks@gmail.com',
     'license': 'OPL-1',
-    'price': 0.00,
+    'price': 400.00,
     'currency': 'USD',
     'images': [
         'static/description/banner.png',
