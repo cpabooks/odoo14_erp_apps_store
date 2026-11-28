@@ -72,7 +72,7 @@ class CafmContractOrderReport(models.Model):
     def action_print_contract_order(self):
         self.ensure_one()
         report = self.env.ref(
-            'facility_management_saaskul.action_report_cafm_contract_order',
+            'facility_ops_manager.action_report_cafm_contract_order',
             raise_if_not_found=False,
         )
         if not report:

@@ -6,9 +6,9 @@ from odoo import api, SUPERUSER_ID
 def post_init_hook(env):
     cr = env.cr
     """Make the Switchgear app visible to every internal user."""
-    menu = env.ref('switchgear_saaskul.menu_flowchart_kanban_root', raise_if_not_found=False)
+    menu = env.ref('switchgear_manager_pro.menu_flowchart_kanban_root', raise_if_not_found=False)
     user_group = env.ref('base.group_user', raise_if_not_found=False)
-    flowchart = env.ref('switchgear_saaskul.group_flowchart', raise_if_not_found=False)
+    flowchart = env.ref('switchgear_manager_pro.group_flowchart', raise_if_not_found=False)
     if menu and user_group:
         menu.write({'group_ids': [(6, 0, [user_group.id])]})
     if user_group and flowchart and flowchart not in user_group.implied_ids:

@@ -1,5 +1,5 @@
 /** @odoo-module ignore */
-(window.__cafmLegacyQueue = window.__cafmLegacyQueue || []).push(["facility_management_saaskul.amc_x_view", function (require) {
+(window.__cafmLegacyQueue = window.__cafmLegacyQueue || []).push(["facility_ops_manager.amc_x_view", function (require) {
     "use strict";
 
     var AbstractAction = require("web.AbstractAction");
@@ -59,7 +59,7 @@
 
     var AmcRegisterXView = AbstractAction.extend({
         contentTemplate: "SaaskulCafmAmcXView",
-        xmlDependencies: ["/facility_management_saaskul/static/src/xml/cafm_amc_x_view.xml"],
+        xmlDependencies: ["/facility_ops_manager/static/src/xml/cafm_amc_x_view.xml"],
 
         init: function (parent, action) {
             this._super(parent, action);
@@ -91,7 +91,7 @@
             }).then(function () {
                 self._render();
                 try {
-                    require("facility_management_saaskul.shell").requestSyncSidebar(true);
+                    require("facility_ops_manager.shell").requestSyncSidebar(true);
                 } catch (e) { /* ignore */ }
             });
         },
@@ -215,7 +215,7 @@
             $mount.html(html.join(""));
             $mount.find(".o_cafm_x_back_btn").on("click", function (ev) {
                 ev.preventDefault();
-                self.do_action("facility_management_saaskul.action_saaskul_cafm_amc");
+                self.do_action("facility_ops_manager.action_saaskul_cafm_amc");
             });
         },
     });

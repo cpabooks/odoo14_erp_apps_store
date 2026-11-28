@@ -17,7 +17,7 @@ Purchase, Inventory, Project and CRM in Odoo 19.
     'support': 'info.cpabooks@gmail.com',
 
     'category': 'Productivity',
-    'version': '19.0.1.63',
+    'version': '19.0.1.64',
     'license': 'OPL-1',
     'price': 0.0,
     'currency': 'USD',

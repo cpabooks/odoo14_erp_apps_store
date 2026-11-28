@@ -3,9 +3,9 @@
 # from odoo import models, fields, api
 
 
-# class chart_of_accounts_saaskul(models.Model):
-#     _name = 'chart_of_accounts_saaskul.chart_of_accounts_saaskul'
-#     _description = 'chart_of_accounts_saaskul.chart_of_accounts_saaskul'
+# class smart_coa_builder(models.Model):
+#     _name = 'smart_coa_builder.smart_coa_builder'
+#     _description = 'smart_coa_builder.smart_coa_builder'
 
 #     name = fields.Char()
 #     value = fields.Integer()

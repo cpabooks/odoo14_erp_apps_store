@@ -10,25 +10,25 @@
               name="Material Request Pending"
               parent="menu_stock_store_root"
               sequence="10"
-              action="field_service_saaskul.action_fsm_store_material_request_pending"/>
+              action="field_service_hub.action_fsm_store_material_request_pending"/>
 
     <menuitem id="menu_stock_store_material_issued"
               name="Material Issued"
               parent="menu_stock_store_root"
               sequence="20"
-              action="field_service_saaskul.action_fsm_store_material_issued"/>
+              action="field_service_hub.action_fsm_store_material_issued"/>
 
     <menuitem id="menu_stock_store_do_pending"
               name="DO Pending"
               parent="menu_stock_store_root"
               sequence="30"
-              action="field_service_saaskul.action_fsm_store_do_pending"/>
+              action="field_service_hub.action_fsm_store_do_pending"/>
 
     <menuitem id="menu_stock_store_do_issued"
               name="DO Issued"
               parent="menu_stock_store_root"
               sequence="40"
-              action="field_service_saaskul.action_fsm_store_do_issued"/>
+              action="field_service_hub.action_fsm_store_do_issued"/>
 
     <menuitem id="issue_menu"
               name="Material Issue Note"

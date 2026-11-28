@@ -462,7 +462,7 @@ class FaffJobWizard(models.TransientModel):
         if not job:
             raise UserError(_("No FAFF Job linked."))
         if job.payment_status != "paid" and not self.env.user.has_group(
-            "fire_alarm_saaskul.group_faff_manager"
+            "fire_alarm_manager.group_faff_manager"
         ):
             raise UserError(
                 _("Register full payment first (or Manager may finish with override).")

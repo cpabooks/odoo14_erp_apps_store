@@ -172,7 +172,7 @@
             <t t-foreach="docs" t-as="o">
                 <t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)"/>
                 <t t-call="web.external_layout">
-                    <t t-call="facility_management_saaskul.CAFM_CO_common_document" t-lang="o.partner_id.lang"/>
+                    <t t-call="facility_ops_manager.CAFM_CO_common_document" t-lang="o.partner_id.lang"/>
                 </t>
             </t>
         </t>

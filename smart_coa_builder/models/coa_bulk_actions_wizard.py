@@ -403,11 +403,11 @@ class CoaBulkActionsWizard(models.TransientModel):
         self.ensure_one()
         if self.operation_mode == 'delete_unused':
             view = self.env.ref(
-                'chart_of_accounts_saaskul.view_coa_delete_unused_wizard_form',
+                'smart_coa_builder.view_coa_delete_unused_wizard_form',
             )
             title = _('Delete Unused COA')
         else:
-            view = self.env.ref('chart_of_accounts_saaskul.view_coa_bulk_actions_wizard_form')
+            view = self.env.ref('smart_coa_builder.view_coa_bulk_actions_wizard_form')
             title = _('Merge COA')
         return {
             'type': 'ir.actions.act_window',
@@ -541,7 +541,7 @@ class CoaBulkActionsWizard(models.TransientModel):
         if suggestion:
             vals['target_account_id'] = suggestion.id
         delete_wizard = self.env['coa.bulk.delete.wizard'].create(vals)
-        view = self.env.ref('chart_of_accounts_saaskul.view_coa_bulk_delete_wizard_form')
+        view = self.env.ref('smart_coa_builder.view_coa_bulk_delete_wizard_form')
         return {
             'type': 'ir.actions.act_window',
             'name': _('Move entries and delete'),
@@ -1059,7 +1059,7 @@ class AccountAccount(models.Model):
         if not callable(method):
             raise UserError(_(
                 'COA action "%s" is not available. Upgrade module '
-                'chart_of_accounts_saaskul, then restart Odoo.'
+                'smart_coa_builder, then restart Odoo.'
             ) % method_name)
         if selection_only and not accounts:
             raise UserError(_('Select one or more ledgers in the list, then run this action.'))
@@ -1455,7 +1455,7 @@ class AccountAccount(models.Model):
 
     def action_open_delete_unused_coa(self):
         accounts = self.exists()
-        view = self.env.ref('chart_of_accounts_saaskul.view_coa_delete_unused_wizard_form')
+        view = self.env.ref('smart_coa_builder.view_coa_delete_unused_wizard_form')
         company = self.env.company
         if accounts:
             account_companies = accounts.mapped('company_id')
@@ -1481,7 +1481,7 @@ class AccountAccount(models.Model):
 
     def cpa_coa_menu_open_action_chooser(self):
         wizard = self.env['coa.menu.action.wizard'].create({})
-        view = self.env.ref('chart_of_accounts_saaskul.view_coa_menu_action_wizard_form')
+        view = self.env.ref('smart_coa_builder.view_coa_menu_action_wizard_form')
         return {
             'type': 'ir.actions.act_window',
             'name': _('COA Actions'),
@@ -1512,7 +1512,7 @@ class AccountAccount(models.Model):
         wizard = self.env['coa.ifrs.reset.confirm.wizard'].create({
             'account_ids': [(6, 0, accounts.ids)],
         })
-        view = self.env.ref('chart_of_accounts_saaskul.view_coa_ifrs_reset_confirm_wizard_form')
+        view = self.env.ref('smart_coa_builder.view_coa_ifrs_reset_confirm_wizard_form')
         return {
             'type': 'ir.actions.act_window',
             'name': _('IFRS Reset / Recode'),
@@ -1528,7 +1528,7 @@ class AccountAccount(models.Model):
         wizard = self.env['coa.reset.code.options.wizard'].create({
             'account_ids': [(6, 0, accounts.ids)],
         })
-        view = self.env.ref('chart_of_accounts_saaskul.view_coa_reset_code_options_wizard_form')
+        view = self.env.ref('smart_coa_builder.view_coa_reset_code_options_wizard_form')
         return {
             'type': 'ir.actions.act_window',
             'name': _('Reset Account Codes'),
@@ -1904,7 +1904,7 @@ class AccountAccount(models.Model):
             'code_digit_length': str(code_digits),
             'company_code_mode': company_code_mode,
         })
-        view = self.env.ref('chart_of_accounts_saaskul.view_coa_reset_code_preview_wizard_form')
+        view = self.env.ref('smart_coa_builder.view_coa_reset_code_preview_wizard_form')
         return {
             'type': 'ir.actions.act_window',
             'name': _('Reset Code Digits Preview'),
@@ -1920,7 +1920,7 @@ class AccountAccount(models.Model):
 
     def action_open_coa_merge_coa(self, prefill_sources=True):
         accounts = self.exists()
-        view = self.env.ref('chart_of_accounts_saaskul.view_coa_bulk_actions_wizard_form')
+        view = self.env.ref('smart_coa_builder.view_coa_bulk_actions_wizard_form')
         company = self.env.company
         if accounts:
             account_companies = accounts.mapped('company_id')

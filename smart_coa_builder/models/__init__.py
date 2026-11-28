@@ -31,7 +31,7 @@ if module_installed('account_reports'):
 else:
     import logging
     logging.getLogger(__name__).info(
-        'chart_of_accounts_saaskul: skip account_report inherits '
+        'smart_coa_builder: skip account_report inherits '
         '(account_reports not installed)'
     )
 

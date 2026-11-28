@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
-    <t t-name="fire_alarm_saaskul.FaffDashboard">
+    <t t-name="fire_alarm_manager.FaffDashboard">
         <div class="o_faff_dashboard_root o_action h-100 overflow-auto">
             <div class="o_faff_dash_header">
                 <div class="o_faff_dash_header_row">
@@ -38,13 +38,13 @@
         </div>
     </t>
 
-    <t t-name="fire_alarm_saaskul.FaffWizardProgressHtml">
+    <t t-name="fire_alarm_manager.FaffWizardProgressHtml">
         <div class="o_field_faff_wiz_progress_html">
             <div t-if="html" class="o_faff_wiz_progress_wrap"><t t-out="html"/></div>
         </div>
     </t>
 
-    <t t-name="fire_alarm_saaskul.FaffShell">
+    <t t-name="fire_alarm_manager.FaffShell">
         <t t-if="shell.active">
             <aside id="o_faff_shell_sidebar" class="o_faff_services_sidebar d-print-none"
                    t-att-aria-hidden="shell.drawerOpen ? 'false' : 'true'">
@@ -80,7 +80,7 @@
         </t>
     </t>
 
-    <t t-name="fire_alarm_saaskul.NavBarFaff" t-inherit="web.NavBar" t-inherit-mode="extension">
+    <t t-name="fire_alarm_manager.NavBarFaff" t-inherit="web.NavBar" t-inherit-mode="extension">
         <xpath expr="//div[hasclass('o_navbar_breadcrumbs')]" position="before">
             <t t-if="faffShell.active">
                 <button id="o_faff_sidebar_toggle" type="button" class="btn btn-link o_faff_sidebar_toggle"

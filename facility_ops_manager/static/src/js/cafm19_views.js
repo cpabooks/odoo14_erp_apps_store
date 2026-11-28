@@ -7,7 +7,7 @@ import { standardFieldProps } from "@web/views/fields/standard_field_props";
 
 /** Read-only HTML report widget (no editor). */
 export class CafmReadonlyHtml extends Component {
-    static template = "facility_management_saaskul.CafmReadonlyHtml";
+    static template = "facility_ops_manager.CafmReadonlyHtml";
     static props = { ...standardFieldProps };
 
     get html() {

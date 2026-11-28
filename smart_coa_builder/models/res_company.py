@@ -139,5 +139,5 @@ class ResConfigSettings(models.TransientModel):
             with self.env.cr.savepoint():
                 getattr(self.env[model], method)()
         except Exception:
-            logging.getLogger(__name__).warning("chart_of_accounts_saaskul: %s.%s skipped", model, method, exc_info=True)
+            logging.getLogger(__name__).warning("smart_coa_builder: %s.%s skipped", model, method, exc_info=True)
         return True

@@ -579,7 +579,7 @@ class AccountGroup(models.Model):
             selection = dict(CTF_CATEGORY_SELECTION)
         except Exception:
             try:
-                from odoo.addons.audited_financials_saaskul.models.account_account import CTF_CATEGORY_SELECTION
+                from odoo.addons.financial_audit_suite.models.account_account import CTF_CATEGORY_SELECTION
                 selection = dict(CTF_CATEGORY_SELECTION)
             except Exception:
                 selection = {}

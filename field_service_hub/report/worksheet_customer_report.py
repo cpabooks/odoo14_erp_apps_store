@@ -4,7 +4,7 @@ from odoo import api, models
 
 
 class TaskJcrInternalReport(models.AbstractModel):
-    _name = 'report.field_service_saaskul.worksheet_custom_internal'
+    _name = 'report.field_service_hub.worksheet_custom_internal'
     _description = 'Job Completion Report (Internal Copy)'
 
     _copy_label = 'TMC Internal'
@@ -20,8 +20,8 @@ class TaskJcrInternalReport(models.AbstractModel):
 
 
 class TaskJcrCustomerReport(models.AbstractModel):
-    _name = 'report.field_service_saaskul.worksheet_custom_customer'
-    _inherit = 'report.field_service_saaskul.worksheet_custom_internal'
+    _name = 'report.field_service_hub.worksheet_custom_customer'
+    _inherit = 'report.field_service_hub.worksheet_custom_internal'
     _description = 'Job Completion Report (Customer Copy)'
 
     _copy_label = 'TMC Customer'

@@ -12,7 +12,7 @@ class CafmContractClientSoa(models.Model):
     def action_print_client_soa(self):
         """Print Client SOA (single project) PDF for selected active contracts."""
         self.ensure_one()
-        return self.env.ref('facility_management_saaskul.action_report_cafm_client_soa').report_action(self)
+        return self.env.ref('facility_ops_manager.action_report_cafm_client_soa').report_action(self)
 
     def _cafm_soa_as_of_date(self):
         return fields.Date.context_today(self)
@@ -350,7 +350,7 @@ class CafmContractClientSoa(models.Model):
 
 
 class ReportCafmClientSoa(models.AbstractModel):
-    _name = 'report.facility_management_saaskul.rpt_cafm_client_soa'
+    _name = 'report.facility_ops_manager.rpt_cafm_client_soa'
     _description = 'CAFM Client SOA Single Project Report'
 
     @api.model

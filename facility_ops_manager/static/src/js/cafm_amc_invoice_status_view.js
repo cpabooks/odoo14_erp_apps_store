@@ -1,5 +1,5 @@
 /** @odoo-module ignore */
-(window.__cafmLegacyQueue = window.__cafmLegacyQueue || []).push(["facility_management_saaskul.amc_invoice_status_view", function (require) {
+(window.__cafmLegacyQueue = window.__cafmLegacyQueue || []).push(["facility_ops_manager.amc_invoice_status_view", function (require) {
     "use strict";
 
     var AbstractAction = require("web.AbstractAction");
@@ -31,7 +31,7 @@
 
     var AmcInvoiceStatusView = AbstractAction.extend({
         contentTemplate: "SaaskulCafmAmcInvoiceStatusView",
-        xmlDependencies: ["/facility_management_saaskul/static/src/xml/cafm_amc_invoice_status_view.xml"],
+        xmlDependencies: ["/facility_ops_manager/static/src/xml/cafm_amc_invoice_status_view.xml"],
 
         init: function (parent, action) {
             this._super(parent, action);
@@ -45,7 +45,7 @@
 
         start: function () {
             var self = this;
-            var toolbar = require("facility_management_saaskul.amc_invoice_toolbar");
+            var toolbar = require("facility_ops_manager.amc_invoice_toolbar");
             this.set("title", _t("AMC Invoice Status"));
             return this._super.apply(this, arguments).then(function () {
                 self.$el.addClass("o_cafm_invoice_status_action");
@@ -57,7 +57,7 @@
                 self._render();
                 toolbar.scheduleEnhanceInvoiceToolbar(self, { mode: "status" });
                 try {
-                    require("facility_management_saaskul.shell").requestSyncSidebar(true);
+                    require("facility_ops_manager.shell").requestSyncSidebar(true);
                 } catch (e) { /* ignore */ }
             });
         },
@@ -200,7 +200,7 @@
             $mount.find(".o_cafm_invoice_status_back_btn").on("click", function (ev) {
                 ev.preventDefault();
                 toolbar.storeStatusViewMode(false);
-                self.do_action("facility_management_saaskul.action_saaskul_cafm_amc_invoices");
+                self.do_action("facility_ops_manager.action_saaskul_cafm_amc_invoices");
             });
 
             $mount.find(".o_cafm_invoice_status_link").on("click", function (ev) {

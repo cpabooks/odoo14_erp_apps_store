@@ -5,40 +5,40 @@ import { registry } from "@web/core/registry";
 import { useBus } from "@web/core/utils/hooks";
 import { user } from "@web/core/user";
 
-const FSM_ROOT_XMLID = "field_service_saaskul.crn_menu_root";
+const FSM_ROOT_XMLID = "field_service_hub.crn_menu_root";
 const SHELL_CLASS = "o_crn_app_shell";
 
 const NAV_ITEMS = [
     {section: 'Home', sectionClass: 'o_crn_section_home', items: [
-        {key: 'dashboard', label: 'Dashboard', xmlid: 'field_service_saaskul.action_crn_service_dashboard', tier: 'home'},
-        {key: 'processing_cycle', label: 'CRN Processing Cycle', xmlid: 'field_service_saaskul.action_crn_processing_cycle', tier: 'home'},
+        {key: 'dashboard', label: 'Dashboard', xmlid: 'field_service_hub.action_crn_service_dashboard', tier: 'home'},
+        {key: 'processing_cycle', label: 'CRN Processing Cycle', xmlid: 'field_service_hub.action_crn_processing_cycle', tier: 'home'},
     ]},
     {section: 'CRNs', sectionClass: 'o_crn_section_crns', items: [
-        {key: 'my_crns', label: 'My CRNs', xmlid: 'field_service_saaskul.crn_task_action_my'},
-        {key: 'all_crns', label: 'All CRNs', xmlid: 'field_service_saaskul.crn_task_action_all'},
-        {key: 'to_quotation', label: 'To Quotation / Issue', xmlid: 'field_service_saaskul.action_fsm_project_task_to_quotation_issue'},
-        {key: 'to_invoice', label: 'To Invoice', xmlid: 'field_service_saaskul.action_fsm_project_task_to_invoice'},
+        {key: 'my_crns', label: 'My CRNs', xmlid: 'field_service_hub.crn_task_action_my'},
+        {key: 'all_crns', label: 'All CRNs', xmlid: 'field_service_hub.crn_task_action_all'},
+        {key: 'to_quotation', label: 'To Quotation / Issue', xmlid: 'field_service_hub.action_fsm_project_task_to_quotation_issue'},
+        {key: 'to_invoice', label: 'To Invoice', xmlid: 'field_service_hub.action_fsm_project_task_to_invoice'},
     ]},
     {section: 'Reporting', sectionClass: 'o_crn_section_reporting', items: [
-        {key: 'service_dashboard', label: 'Service Charts Dashboard', xmlid: 'field_service_saaskul.action_fsm_service_monitor_dashboard'},
-        {key: 'task_analysis', label: 'CRN Analysis', xmlid: 'field_service_saaskul.action_fsm_task_analysis_monitor'},
-        {key: 'timesheet_analysis', label: 'Timesheet Analysis', xmlid: 'field_service_saaskul.action_fsm_timesheet_analysis_monitor'},
-        {key: 'material_consumption', label: 'Material Consumption Analysis', xmlid: 'field_service_saaskul.action_fsm_material_consumption_analysis'},
+        {key: 'service_dashboard', label: 'Service Charts Dashboard', xmlid: 'field_service_hub.action_fsm_service_monitor_dashboard'},
+        {key: 'task_analysis', label: 'CRN Analysis', xmlid: 'field_service_hub.action_fsm_task_analysis_monitor'},
+        {key: 'timesheet_analysis', label: 'Timesheet Analysis', xmlid: 'field_service_hub.action_fsm_timesheet_analysis_monitor'},
+        {key: 'material_consumption', label: 'Material Consumption Analysis', xmlid: 'field_service_hub.action_fsm_material_consumption_analysis'},
     ]},
     {section: 'Store', sectionClass: 'o_crn_section_store', items: [
-        {key: 'stock_issue', label: 'Material Issue Note', xmlid: 'field_service_saaskul.issue_action'},
-        {key: 'stock_return', label: 'Material Return Note', xmlid: 'field_service_saaskul.return_issue_action'},
-        {key: 'mat_request', label: 'Material Request Pending', xmlid: 'field_service_saaskul.action_fsm_store_material_request_pending'},
-        {key: 'mat_issued', label: 'Material Issued', xmlid: 'field_service_saaskul.action_fsm_store_material_issued'},
-        {key: 'do_pending', label: 'DO Pending', xmlid: 'field_service_saaskul.action_fsm_store_do_pending'},
-        {key: 'do_issued', label: 'DO Issued', xmlid: 'field_service_saaskul.action_fsm_store_do_issued'},
+        {key: 'stock_issue', label: 'Material Issue Note', xmlid: 'field_service_hub.issue_action'},
+        {key: 'stock_return', label: 'Material Return Note', xmlid: 'field_service_hub.return_issue_action'},
+        {key: 'mat_request', label: 'Material Request Pending', xmlid: 'field_service_hub.action_fsm_store_material_request_pending'},
+        {key: 'mat_issued', label: 'Material Issued', xmlid: 'field_service_hub.action_fsm_store_material_issued'},
+        {key: 'do_pending', label: 'DO Pending', xmlid: 'field_service_hub.action_fsm_store_do_pending'},
+        {key: 'do_issued', label: 'DO Issued', xmlid: 'field_service_hub.action_fsm_store_do_issued'},
     ]},
     {section: 'Timesheets', sectionClass: 'o_crn_section_timesheet', items: [
         {key: 'timesheet_mine', label: 'My Timesheets', xmlid: 'hr_timesheet.act_hr_timesheet_line'},
         {key: 'timesheet_all', label: 'All Timesheets', xmlid: 'hr_timesheet.timesheet_action_all'},
     ]},
     {section: 'Settings', sectionClass: 'o_crn_section_settings', items: [
-        {key: 'test_data', label: 'FSM Test Data', xmlid: 'field_service_saaskul.action_fsm_test_data_wizard', admin_only: true},
+        {key: 'test_data', label: 'FSM Test Data', xmlid: 'field_service_hub.action_fsm_test_data_wizard', admin_only: true},
         {key: 'all_apps', label: 'All Odoo Apps', special: 'open_app_menu'},
     ]},
 ];
@@ -147,7 +147,7 @@ function activeKeyFromAction(action) {
 export const crnShellState = reactive({ active: false, activeKey: "dashboard" });
 
 export class CrnShell extends Component {
-    static template = "field_service_saaskul.CrnShell";
+    static template = "field_service_hub.CrnShell";
     static props = {};
 
     setup() {
@@ -192,4 +192,4 @@ export class CrnShell extends Component {
     }
 }
 
-registry.category("main_components").add("field_service_saaskul.CrnShell", { Component: CrnShell });
+registry.category("main_components").add("field_service_hub.CrnShell", { Component: CrnShell });

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Fire Alarm Management System',
-    'version': '19.0.1.0.19',
+    'version': '19.0.1.0.20',
     'summary': 'Fire Alarm & Fire Fighting job management (CRM to Payment)',
     'sequence': -95,
     'description': """
@@ -28,7 +28,7 @@ Execute → Test → Handover → Invoice → Payment.
         'mail',
         'hr',
         'hr_timesheet',
-        're_sequences_saaskul',
+        'smart_sequence_engine',
     ],
     'data': [
         'security/faff_security.xml',
@@ -57,16 +57,16 @@ Execute → Test → Handover → Invoice → Payment.
     'demo': [],
     'assets': {
         'web.assets_backend': [
-            'fire_alarm_saaskul/static/src/css/faff_backend_shell.css',
-            'fire_alarm_saaskul/static/src/css/faff_ui_theme_default.css',
-            'fire_alarm_saaskul/static/src/css/faff_dashboard.css',
-            'fire_alarm_saaskul/static/src/css/faff_process_wizard.css',
-            'fire_alarm_saaskul/static/src/css/faff_process_flow.css',
-            'fire_alarm_saaskul/static/src/xml/faff_dashboard.xml',
-            'fire_alarm_saaskul/static/src/xml/faff_process_flow.xml',
-            'fire_alarm_saaskul/static/src/js/faff_shell.js',
-            'fire_alarm_saaskul/static/src/js/faff_client_actions.js',
-            'fire_alarm_saaskul/static/src/js/faff_wizard_progress_html.js',
+            'fire_alarm_manager/static/src/css/faff_backend_shell.css',
+            'fire_alarm_manager/static/src/css/faff_ui_theme_default.css',
+            'fire_alarm_manager/static/src/css/faff_dashboard.css',
+            'fire_alarm_manager/static/src/css/faff_process_wizard.css',
+            'fire_alarm_manager/static/src/css/faff_process_flow.css',
+            'fire_alarm_manager/static/src/xml/faff_dashboard.xml',
+            'fire_alarm_manager/static/src/xml/faff_process_flow.xml',
+            'fire_alarm_manager/static/src/js/faff_shell.js',
+            'fire_alarm_manager/static/src/js/faff_client_actions.js',
+            'fire_alarm_manager/static/src/js/faff_wizard_progress_html.js',
         ],
     },
     'installable': True,

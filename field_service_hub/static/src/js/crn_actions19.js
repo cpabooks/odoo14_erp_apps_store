@@ -6,20 +6,20 @@ import { useService } from "@web/core/utils/hooks";
 import { loadBundle } from "@web/core/assets";
 
 const CYCLE_STEPS = [
-    {step: 1, label: '1. Registered', xmlid: 'field_service_saaskul.crn_task_action_all', theme: 'intake'},
-    {step: 2, label: '2. Site Visited', xmlid: 'field_service_saaskul.crn_task_action_all', theme: 'intake'},
-    {step: 3, label: '3. Quotation Issued', xmlid: 'field_service_saaskul.action_fsm_project_task_to_quotation_issue', theme: 'quotation'},
-    {step: 4, label: '4. QTN Approved', xmlid: 'field_service_saaskul.crn_task_action_all', theme: 'quotation'},
-    {step: 5, label: '5. Work in Progress', xmlid: 'field_service_saaskul.crn_task_action_all', theme: 'execution'},
-    {step: 6, label: '6. Waiting Invoice', xmlid: 'field_service_saaskul.action_fsm_project_task_to_invoice', theme: 'billing'},
-    {step: 7, label: '7. Job Complete FOC', xmlid: 'field_service_saaskul.crn_task_action_all', theme: 'billing'},
-    {step: 8, label: '8. Job Invoiced', xmlid: 'field_service_saaskul.crn_task_action_all', theme: 'billing'},
-    {step: 9, label: '9. Approved', xmlid: 'field_service_saaskul.action_fsm_task_analysis_monitor', theme: 'closed'},
+    {step: 1, label: '1. Registered', xmlid: 'field_service_hub.crn_task_action_all', theme: 'intake'},
+    {step: 2, label: '2. Site Visited', xmlid: 'field_service_hub.crn_task_action_all', theme: 'intake'},
+    {step: 3, label: '3. Quotation Issued', xmlid: 'field_service_hub.action_fsm_project_task_to_quotation_issue', theme: 'quotation'},
+    {step: 4, label: '4. QTN Approved', xmlid: 'field_service_hub.crn_task_action_all', theme: 'quotation'},
+    {step: 5, label: '5. Work in Progress', xmlid: 'field_service_hub.crn_task_action_all', theme: 'execution'},
+    {step: 6, label: '6. Waiting Invoice', xmlid: 'field_service_hub.action_fsm_project_task_to_invoice', theme: 'billing'},
+    {step: 7, label: '7. Job Complete FOC', xmlid: 'field_service_hub.crn_task_action_all', theme: 'billing'},
+    {step: 8, label: '8. Job Invoiced', xmlid: 'field_service_hub.crn_task_action_all', theme: 'billing'},
+    {step: 9, label: '9. Approved', xmlid: 'field_service_hub.action_fsm_task_analysis_monitor', theme: 'closed'},
 ];
 
 /** Complaint Registration Management dashboard (KPIs + workflow lists). */
 export class CrnServiceDashboard extends Component {
-    static template = "field_service_saaskul.CrnServiceDashboard";
+    static template = "field_service_hub.CrnServiceDashboard";
     static props = ["*"];
 
     setup() {
@@ -69,7 +69,7 @@ export class CrnServiceDashboard extends Component {
 
 /** Clickable CRN processing cycle (9 steps around a ring). */
 export class CrnProcessingCycle extends Component {
-    static template = "field_service_saaskul.CrnProcessingCycle";
+    static template = "field_service_hub.CrnProcessingCycle";
     static props = ["*"];
 
     setup() {
@@ -91,7 +91,7 @@ const BAR_COLORS = ["#ca6a3b", "#d8a75f", "#2f7a72", "#3f556b", "#93a67f", "#b85
 
 /** Service Monitoring Dashboard with Chart.js drill-down charts. */
 export class FsmServiceDashboard extends Component {
-    static template = "field_service_saaskul.FsmServiceDashboard";
+    static template = "field_service_hub.FsmServiceDashboard";
     static props = ["*"];
 
     setup() {

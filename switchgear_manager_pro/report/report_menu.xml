@@ -22,11 +22,11 @@
             <field name="name">QC Label</field>
             <field name="model">switchgear.quality.check</field>
             <field name="report_type">qweb-pdf</field>
-            <field name="report_name">switchgear_saaskul.report_qc_label_sw</field>
-            <field name="report_file">switchgear_saaskul.report_qc_label</field>
-            <field name="paperformat_id" ref="switchgear_saaskul.paperformat_qc_label"/>
+            <field name="report_name">switchgear_manager_pro.report_qc_label_sw</field>
+            <field name="report_file">switchgear_manager_pro.report_qc_label</field>
+            <field name="paperformat_id" ref="switchgear_manager_pro.paperformat_qc_label"/>
             <field name="print_report_name">'QC Label - %s' % (object.product_id.name)</field>
-            <field name="binding_model_id" ref="switchgear_saaskul.model_switchgear_quality_check"/>
+            <field name="binding_model_id" ref="switchgear_manager_pro.model_switchgear_quality_check"/>
             <field name="binding_type">report</field>
         </record>
 

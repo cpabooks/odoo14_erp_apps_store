@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
-    <t t-name="fire_alarm_saaskul.FaffProcessFlow">
+    <t t-name="fire_alarm_manager.FaffProcessFlow">
         <div class="o_faff_flow_root o_action h-100 overflow-auto">
             <div class="o_faff_flow_header">
                 <div>
@@ -11,7 +11,7 @@
                     </p>
                 </div>
                 <div class="o_faff_flow_badges">
-                    <div class="o_faff_flow_badge">New Module: <b>fire_alarm_saaskul</b></div>
+                    <div class="o_faff_flow_badge">New Module: <b>fire_alarm_manager</b></div>
                     <div class="o_faff_flow_badge">Menu Name: <b>FAFF</b></div>
                     <a href="#" class="o_faff_flow_start btn btn-primary" t-on-click.prevent="startJob">
                         <i class="fa fa-play"/> Start New FAFF Job

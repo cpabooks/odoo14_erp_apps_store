@@ -27,7 +27,7 @@ _PIPELINE_STAGE_META = [
 ]
 
 # Dashboard call KPI/workflow drill opens the Call Register list (table), not form.
-_CALL_LIST_ACTION = 'facility_management_saaskul.action_cafm_call_register'
+_CALL_LIST_ACTION = 'facility_ops_manager.action_cafm_call_register'
 
 
 class CafmDashboard(models.AbstractModel):
@@ -296,9 +296,9 @@ class CafmDashboard(models.AbstractModel):
 
     def _call_register_drill_action(self, name, domain):
         """Hard-coded Call Register list action — avoids stale view_id / form-first menu actions."""
-        tree_view = self.env.ref('facility_management_saaskul.view_cafm_call_register_tree')
-        form_view = self.env.ref('facility_management_saaskul.view_cafm_amc_call_form')
-        search_view = self.env.ref('facility_management_saaskul.view_cafm_amc_call_search')
+        tree_view = self.env.ref('facility_ops_manager.view_cafm_call_register_tree')
+        form_view = self.env.ref('facility_ops_manager.view_cafm_amc_call_form')
+        search_view = self.env.ref('facility_ops_manager.view_cafm_amc_call_search')
         merged_domain = self._merged_domain(
             'maintenance.request',
             domain,
@@ -501,7 +501,7 @@ class CafmDashboard(models.AbstractModel):
                     'count': counts['var'],
                     'drill': self._list_action(
                         label, 'saaskul.cafm.var.work', self._var_domain_for_bucket(key),
-                        action_xmlid='facility_management_saaskul.action_cafm_var_work_report',
+                        action_xmlid='facility_ops_manager.action_cafm_var_work_report',
                     ),
                 })
             stages.append({
@@ -533,7 +533,7 @@ class CafmDashboard(models.AbstractModel):
                 ('call_type', '=', 'amc'), ('work_status', '=', 'pending'),
             ], 'fa-pencil-square-o', action_xmlid=_CALL_LIST_ACTION),
             self._kpi('Quotation / VAR', VarWork, [('status', '=', 'waiting_approval')], 'fa-file-text-o',
-                      action_xmlid='facility_management_saaskul.action_cafm_var_work_approval'),
+                      action_xmlid='facility_ops_manager.action_cafm_var_work_approval'),
             self._kpi('Work in Progress', Call, [
                 ('call_type', '=', 'amc'), ('work_status', '=', 'work_ongoing'),
             ], 'fa-wrench', action_xmlid=_CALL_LIST_ACTION),
@@ -545,7 +545,7 @@ class CafmDashboard(models.AbstractModel):
             ], 'fa-money', action_xmlid=_CALL_LIST_ACTION),
             self._kpi('Material Draft', Stock, [('state', '=', 'draft')], 'fa-cubes'),
             self._kpi('Active AMC', Contract, [('contract_status', '=', 'active')], 'fa-file-text-o',
-                      action_xmlid='facility_management_saaskul.action_saaskul_cafm_amc'),
+                      action_xmlid='facility_ops_manager.action_saaskul_cafm_amc'),
         ]
 
     @api.model
@@ -570,7 +570,7 @@ class CafmDashboard(models.AbstractModel):
                     self._item('All AMC calls', Call, [('call_type', '=', 'amc')], 'progress',
                                action_xmlid=_CALL_LIST_ACTION),
                     self._item('Active AMC contracts', Contract, [('contract_status', '=', 'active')], 'progress',
-                               action_xmlid='facility_management_saaskul.action_saaskul_cafm_amc'),
+                               action_xmlid='facility_ops_manager.action_saaskul_cafm_amc'),
                 ],
             },
             {
@@ -579,13 +579,13 @@ class CafmDashboard(models.AbstractModel):
                 'theme': 'quotation',
                 'items': [
                     self._item('VAR — waiting approval', VarWork, [('status', '=', 'waiting_approval')], 'pending',
-                               action_xmlid='facility_management_saaskul.action_cafm_var_work_approval'),
+                               action_xmlid='facility_ops_manager.action_cafm_var_work_approval'),
                     self._item('VAR — work ongoing', VarWork, [('status', '=', 'work_ongoing')], 'progress',
-                               action_xmlid='facility_management_saaskul.action_cafm_var_work_ongoing'),
+                               action_xmlid='facility_ops_manager.action_cafm_var_work_ongoing'),
                     self._item('VAR — waiting LPO', VarWork, [('status', '=', 'waiting_lpo')], 'pending',
-                               action_xmlid='facility_management_saaskul.action_cafm_var_waiting_lpo'),
+                               action_xmlid='facility_ops_manager.action_cafm_var_waiting_lpo'),
                     self._item('All VAR works', VarWork, [], 'progress',
-                               action_xmlid='facility_management_saaskul.action_cafm_var_work_report'),
+                               action_xmlid='facility_ops_manager.action_cafm_var_work_report'),
                 ],
             },
             {
@@ -597,7 +597,7 @@ class CafmDashboard(models.AbstractModel):
                         ('call_type', '=', 'amc'), ('work_status', '=', 'work_ongoing'),
                     ], 'progress', action_xmlid=_CALL_LIST_ACTION),
                     self._item('VAR — work ongoing', VarWork, [('status', '=', 'work_ongoing')], 'progress',
-                               action_xmlid='facility_management_saaskul.action_cafm_var_work_ongoing'),
+                               action_xmlid='facility_ops_manager.action_cafm_var_work_ongoing'),
                     self._item('Draft material issues', Stock, [('state', '=', 'draft')], 'pending'),
                 ],
             },
@@ -608,16 +608,16 @@ class CafmDashboard(models.AbstractModel):
                 'items': [
                     self._item('AMC stock issue', Stock, [
                         ('issue_type', '=', 'amc'), ('state', '!=', 'cancel'),
-                    ], 'progress', action_xmlid='facility_management_saaskul.action_cafm_stock_issue_amc'),
+                    ], 'progress', action_xmlid='facility_ops_manager.action_cafm_stock_issue_amc'),
                     self._item('VAR stock issue', Stock, [
                         ('issue_type', '=', 'var'), ('state', '!=', 'cancel'),
-                    ], 'progress', action_xmlid='facility_management_saaskul.action_cafm_stock_issue_var'),
+                    ], 'progress', action_xmlid='facility_ops_manager.action_cafm_stock_issue_var'),
                     self._item('Stock transfer', Stock, [
                         ('issue_type', '=', 'transfer'), ('state', '!=', 'cancel'),
-                    ], 'pending', action_xmlid='facility_management_saaskul.action_cafm_stock_transfer'),
+                    ], 'pending', action_xmlid='facility_ops_manager.action_cafm_stock_transfer'),
                     self._item('Receipt notes', Stock, [
                         ('issue_type', '=', 'receipt'), ('state', '!=', 'cancel'),
-                    ], 'pending', action_xmlid='facility_management_saaskul.action_cafm_stock_receipt_report'),
+                    ], 'pending', action_xmlid='facility_ops_manager.action_cafm_stock_receipt_report'),
                 ],
             },
             {
@@ -633,10 +633,10 @@ class CafmDashboard(models.AbstractModel):
                     ], 'pending', action_xmlid=_CALL_LIST_ACTION),
                     self._item('VAR — closed no invoice', VarWork, [
                         ('status', '=', 'closed'), ('invoice_id', '=', False),
-                    ], 'pending', action_xmlid='facility_management_saaskul.action_cafm_var_work_report'),
+                    ], 'pending', action_xmlid='facility_ops_manager.action_cafm_var_work_report'),
                     self._item('VAR — invoiced / closed', VarWork, [
                         ('status', '=', 'closed'), ('invoice_id', '!=', False),
-                    ], 'progress', action_xmlid='facility_management_saaskul.action_cafm_var_work_report'),
+                    ], 'progress', action_xmlid='facility_ops_manager.action_cafm_var_work_report'),
                 ],
             },
         ]
@@ -646,7 +646,7 @@ class CafmDashboard(models.AbstractModel):
                 self._item('Contract orders — pending invoice', Order, [
                     ('invoice_id', '=', False),
                     ('state', 'in', ['draft', 'order']),
-                ], 'pending', action_xmlid='facility_management_saaskul.action_saaskul_cafm_pending_orders_to_invoice'),
+                ], 'pending', action_xmlid='facility_ops_manager.action_saaskul_cafm_pending_orders_to_invoice'),
             )
 
         sections.append({
@@ -655,13 +655,13 @@ class CafmDashboard(models.AbstractModel):
             'theme': 'portfolio',
             'items': [
                 self._item('Projects', 'project.project', [], 'progress',
-                           action_xmlid='facility_management_saaskul.action_saaskul_cafm_projects'),
+                           action_xmlid='facility_ops_manager.action_saaskul_cafm_projects'),
                 self._item('Units', 'saaskul.cafm.unit', [], 'progress',
-                           action_xmlid='facility_management_saaskul.action_saaskul_cafm_units'),
+                           action_xmlid='facility_ops_manager.action_saaskul_cafm_units'),
                 self._item('Active PPM', 'saaskul.cafm.ppm', [('state', '=', 'active')], 'progress',
-                           action_xmlid='facility_management_saaskul.action_saaskul_cafm_ppm'),
+                           action_xmlid='facility_ops_manager.action_saaskul_cafm_ppm'),
                 self._item('Expiring AMC (90d)', Contract, self._expiring_90_domain(), 'pending',
-                           action_xmlid='facility_management_saaskul.action_saaskul_cafm_amc'),
+                           action_xmlid='facility_ops_manager.action_saaskul_cafm_amc'),
             ],
         })
 

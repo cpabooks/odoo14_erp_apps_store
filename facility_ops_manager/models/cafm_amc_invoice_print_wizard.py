@@ -283,4 +283,4 @@ class CafmAmcInvoicePrintWizard(models.TransientModel):
         }
 
     def action_print_pdf(self):
-        return self.env.ref('facility_management_saaskul.action_report_amc_invoice_statement').report_action(self)
+        return self.env.ref('facility_ops_manager.action_report_amc_invoice_statement').report_action(self)

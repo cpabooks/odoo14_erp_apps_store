@@ -6,7 +6,7 @@ import { standardFieldProps } from "@web/views/fields/standard_field_props";
 
 /** Read-only HTML progress strip used in the FAFF job wizard. */
 export class FaffWizardProgressHtml extends Component {
-    static template = "fire_alarm_saaskul.FaffWizardProgressHtml";
+    static template = "fire_alarm_manager.FaffWizardProgressHtml";
     static props = { ...standardFieldProps };
 
     get html() {

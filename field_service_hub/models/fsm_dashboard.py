@@ -59,10 +59,10 @@ class ProjectTaskDashboard(models.Model):
         )
 
         task_action = self._get_fsm_dashboard_action_template(
-            'field_service_saaskul.action_fsm_task_analysis_monitor'
+            'field_service_hub.action_fsm_task_analysis_monitor'
         )
         timesheet_action = self._get_fsm_dashboard_action_template(
-            'field_service_saaskul.action_fsm_timesheet_analysis_monitor'
+            'field_service_hub.action_fsm_timesheet_analysis_monitor'
         )
         task_action['domain'] = list(task_domain)
         timesheet_action['domain'] = list(timesheet_domain)

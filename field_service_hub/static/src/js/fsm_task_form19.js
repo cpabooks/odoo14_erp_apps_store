@@ -218,7 +218,7 @@ patch(FormController.prototype, {
 
 /** Read-only HTML (no editor) for the CRN workflow banners. */
 export class FsmReadonlyHtml extends Component {
-    static template = "field_service_saaskul.FsmReadonlyHtml";
+    static template = "field_service_hub.FsmReadonlyHtml";
     static props = { ...standardFieldProps };
 
     get html() {

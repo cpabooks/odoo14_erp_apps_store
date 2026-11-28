@@ -25,9 +25,9 @@ not use or copy web_enterprise.
     'depends': ['web'],
     'assets': {
         'web.assets_backend': [
-            'app_sidebar_saaskul/static/src/scss/sidebar.scss',
-            'app_sidebar_saaskul/static/src/xml/sidebar.xml',
-            'app_sidebar_saaskul/static/src/js/sidebar.js',
+            'side_menu_navigator/static/src/scss/sidebar.scss',
+            'side_menu_navigator/static/src/xml/sidebar.xml',
+            'side_menu_navigator/static/src/js/sidebar.js',
         ],
     },
     'installable': True,

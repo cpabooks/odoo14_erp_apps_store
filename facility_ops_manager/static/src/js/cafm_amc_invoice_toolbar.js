@@ -1,5 +1,5 @@
 /** @odoo-module ignore */
-(window.__cafmLegacyQueue = window.__cafmLegacyQueue || []).push(['facility_management_saaskul.amc_invoice_toolbar', function (require) {
+(window.__cafmLegacyQueue = window.__cafmLegacyQueue || []).push(['facility_ops_manager.amc_invoice_toolbar', function (require) {
     'use strict';
 
     var core = require('web.core');
@@ -13,7 +13,7 @@
     rpc.query({
         model: 'ir.model.data',
         method: 'xmlid_to_res_id',
-        args: ['facility_management_saaskul.action_saaskul_cafm_amc_invoices', false],
+        args: ['facility_ops_manager.action_saaskul_cafm_amc_invoices', false],
     }).then(function (actionId) {
         cafmInvoiceActionId = actionId;
     });
@@ -139,7 +139,7 @@
 
     function isNavbarCafmBrand() {
         try {
-            return require('facility_management_saaskul.shell').isNavbarCafmBrand();
+            return require('facility_ops_manager.shell').isNavbarCafmBrand();
         } catch (e) {
             var brand = document.querySelector('.o_main_navbar .o_menu_brand');
             if (!brand) {
@@ -220,7 +220,7 @@
             // ignore
         }
         try {
-            if (require('facility_management_saaskul.shell').isCafmAppActive()) {
+            if (require('facility_ops_manager.shell').isCafmAppActive()) {
                 var title = ($('.o_control_panel .o_last_breadcrumb_item').text() || '').trim();
                 if (!title) {
                     title = ($('.o_control_panel .breadcrumb-item.active').last().text() || '').trim();
@@ -340,7 +340,7 @@
 
     function openInvoiceList(widget) {
         storeStatusViewMode(false);
-        return widget.do_action('facility_management_saaskul.action_saaskul_cafm_amc_invoices');
+        return widget.do_action('facility_ops_manager.action_saaskul_cafm_amc_invoices');
     }
 
     function injectCafmInvoiceToolbar(widget, options) {

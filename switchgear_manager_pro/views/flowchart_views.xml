@@ -35,7 +35,7 @@
                                             </button>
                                         </div>
                                         <div class="mt16">
-                                            <button name="%(switchgear_saaskul.action_job_estimate)d" type="action" string="ESTIMATION" class="btn btn-info col-10">
+                                            <button name="%(switchgear_manager_pro.action_job_estimate)d" type="action" string="ESTIMATION" class="btn btn-info col-10">
                                                 ESTIMATION
                                             </button>
                                         </div>
@@ -49,7 +49,7 @@
                                         <h3 class="text-success">ENGINEERING &amp; PRODUCTION</h3>
 
                                         <div class="mt16">
-                                            <button name="%(switchgear_saaskul.action_switchgear_design_document)d" type="action" string="DESIGN (DOCUMENTS)" class="btn btn-success col-10">
+                                            <button name="%(switchgear_manager_pro.action_switchgear_design_document)d" type="action" string="DESIGN (DOCUMENTS)" class="btn btn-success col-10">
                                                 DESIGN (DOCUMENTS)
                                             </button>
                                         </div>
@@ -64,12 +64,12 @@
                                             </button>
                                         </div>
                                         <div class="mt16">
-                                            <button name="%(switchgear_saaskul.action_material_purchase_requisition)d" type="action" string="PURCHASE REQUISITION" class="btn btn-success col-10">
+                                            <button name="%(switchgear_manager_pro.action_material_purchase_requisition)d" type="action" string="PURCHASE REQUISITION" class="btn btn-success col-10">
                                                 PURCHASE REQUISITION
                                             </button>
                                         </div>
                                         <div class="mt16">
-                                            <button name="%(switchgear_saaskul.quality_alert_team_action)d" type="action" string="QUALITY CONTROL/HANDOVER FINISHED PRODUCT TO STORE" class="btn btn-success col-10">
+                                            <button name="%(switchgear_manager_pro.quality_alert_team_action)d" type="action" string="QUALITY CONTROL/HANDOVER FINISHED PRODUCT TO STORE" class="btn btn-success col-10">
                                                 QUALITY CONTROL/HANDOVER FINISHED PRODUCT TO STORE
                                             </button>
                                         </div>
@@ -173,14 +173,14 @@
         id="menu_flowchart_kanban_root"
         name="Switchgear"
         action="action_switchgear_dashboard"
-        web_icon="switchgear_saaskul,static/description/icon.png"
+        web_icon="switchgear_manager_pro,static/description/icon.png"
         sequence="5"/>
 
     <menuitem
         id="menu_flowchart_kanban"
         name="Dashboard"
         action="action_switchgear_dashboard"
-        parent="switchgear_saaskul.menu_flowchart_kanban_root"
+        parent="switchgear_manager_pro.menu_flowchart_kanban_root"
         sequence="1"/>
 
     <menuitem

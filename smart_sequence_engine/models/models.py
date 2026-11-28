@@ -3,9 +3,9 @@
 # from odoo import models, fields, api
 
 
-# class re_sequences_saaskul(models.Model):
-#     _name = 're_sequences_saaskul.re_sequences_saaskul'
-#     _description = 're_sequences_saaskul.re_sequences_saaskul'
+# class smart_sequence_engine(models.Model):
+#     _name = 'smart_sequence_engine.smart_sequence_engine'
+#     _description = 'smart_sequence_engine.smart_sequence_engine'
 
 #     name = fields.Char()
 #     value = fields.Integer()

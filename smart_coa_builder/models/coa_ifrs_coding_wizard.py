@@ -85,7 +85,7 @@ class CoaIfrsResetConfirmWizard(models.TransientModel):
             'account_ids': [(6, 0, self.account_ids.ids)],
             'company_ids': [(6, 0, self.company_ids.ids)],
         })
-        view = self.env.ref('chart_of_accounts_saaskul.view_coa_ifrs_coding_wizard_form')
+        view = self.env.ref('smart_coa_builder.view_coa_ifrs_coding_wizard_form')
         return {
             'type': 'ir.actions.act_window',
             'name': _('IFRS Reset / Recode'),
@@ -187,7 +187,7 @@ class CoaIfrsCodingWizard(models.TransientModel):
                 'Review before applying; journal entries are not changed.'
             ) % (branch_legend, engine._ifrs_range_help_text()),
         })
-        view = self.env.ref('chart_of_accounts_saaskul.view_coa_ifrs_coding_preview_form')
+        view = self.env.ref('smart_coa_builder.view_coa_ifrs_coding_preview_form')
         action = {
             'type': 'ir.actions.act_window',
             'name': _('IFRS Reset / Recode Preview'),
@@ -311,7 +311,7 @@ class CoaIfrsNameSuggestionWizard(models.TransientModel):
 
     def action_open(self):
         self.ensure_one()
-        view = self.env.ref('chart_of_accounts_saaskul.view_coa_ifrs_name_suggestion_wizard_form')
+        view = self.env.ref('smart_coa_builder.view_coa_ifrs_name_suggestion_wizard_form')
         return {
             'type': 'ir.actions.act_window',
             'name': _('IFRS naming suggestion'),

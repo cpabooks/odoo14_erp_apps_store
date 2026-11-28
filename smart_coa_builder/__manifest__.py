@@ -57,7 +57,7 @@ balances — on Odoo 19 Community and Enterprise.
     ],
     'assets': {
         'web.assets_backend': [
-            'chart_of_accounts_saaskul/static/src/js/coa19_views.js',
+            'smart_coa_builder/static/src/js/coa19_views.js',
         ],
     },
     'post_init_hook': 'post_init_hook',

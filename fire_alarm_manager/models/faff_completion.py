@@ -47,7 +47,7 @@ class FaffCompletion(models.Model):
         for rec in self:
             testing = rec.job_id.testing_ids[:1]
             if testing and testing.system_status in ("failed", "rectification"):
-                if not self.env.user.has_group("fire_alarm_saaskul.group_faff_manager"):
+                if not self.env.user.has_group("fire_alarm_manager.group_faff_manager"):
                     raise UserError(
                         _(
                             "Testing failed / rectification open. "
@@ -65,6 +65,6 @@ class FaffCompletion(models.Model):
 
     def action_print_handover(self):
         self.ensure_one()
-        return self.env.ref("fire_alarm_saaskul.action_report_faff_completion").report_action(
+        return self.env.ref("fire_alarm_manager.action_report_faff_completion").report_action(
             self
         )

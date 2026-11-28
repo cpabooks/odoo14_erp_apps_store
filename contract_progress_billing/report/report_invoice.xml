@@ -4,8 +4,8 @@
         <field name="name">Construction Invoice (Work Done %)</field>
         <field name="model">account.move</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">construction_progress_invoice_saaskul.report_cpi_invoice</field>
-        <field name="report_file">construction_progress_invoice_saaskul.report_cpi_invoice</field>
+        <field name="report_name">contract_progress_billing.report_cpi_invoice</field>
+        <field name="report_file">contract_progress_billing.report_cpi_invoice</field>
         <field name="print_report_name">'Construction Invoice - %s' % (object.name or '')</field>
         <field name="binding_model_id" ref="account.model_account_move"/>
         <field name="binding_type">report</field>
@@ -158,7 +158,7 @@
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="o">
                 <t t-set="lang" t-value="o.partner_id.lang"/>
-                <t t-call="construction_progress_invoice_saaskul.report_cpi_invoice_document" t-lang="lang"/>
+                <t t-call="contract_progress_billing.report_cpi_invoice_document" t-lang="lang"/>
             </t>
         </t>
     </template>

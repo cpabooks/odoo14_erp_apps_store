@@ -4,7 +4,7 @@
         <menuitem id="menu_saaskul_cafm_root"
                   name="CAFM"
                   sequence="20"
-                  web_icon="facility_management_saaskul,static/description/icon.png"/>
+                  web_icon="facility_ops_manager,static/description/icon.png"/>
 
         <menuitem id="menu_saaskul_cafm_operations"
                   name="Operations"

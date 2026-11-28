@@ -14,7 +14,7 @@ class SwitchgearDashboard(models.AbstractModel):
         if not self.env.user.has_group('base.group_system'):
             raise UserError(_('Only Settings / Administrator users can manage switchgear demo data.'))
         action = self.env.ref(
-            'switchgear_saaskul.action_switchgear_demo_wizard',
+            'switchgear_manager_pro.action_switchgear_demo_wizard',
             raise_if_not_found=False,
         )
         if not action:
@@ -124,7 +124,7 @@ class SwitchgearDashboard(models.AbstractModel):
                 'value': Estimate.search_count(cd('switchgear.estimate') + [
                     ('state', 'in', ('draft', 'confirmed', 'approved')),
                 ]),
-                'action_xmlid': 'switchgear_saaskul.action_job_estimate',
+                'action_xmlid': 'switchgear_manager_pro.action_job_estimate',
                 'icon': 'fa-calculator',
             },
             {
@@ -144,7 +144,7 @@ class SwitchgearDashboard(models.AbstractModel):
                 'value': self.env['switchgear.design.document'].sudo().search_count(
                     cd('switchgear.design.document'),
                 ),
-                'action_xmlid': 'switchgear_saaskul.action_switchgear_design_document',
+                'action_xmlid': 'switchgear_manager_pro.action_switchgear_design_document',
                 'icon': 'fa-paperclip',
             },
             {
@@ -158,7 +158,7 @@ class SwitchgearDashboard(models.AbstractModel):
                 'value': Picking.search_count(cd('stock.picking') + [
                     ('picking_type_code', '=', 'incoming'), ('state', 'not in', ('done', 'cancel')),
                 ]),
-                'action_xmlid': 'switchgear_saaskul.action_switchgear_stock_incoming',
+                'action_xmlid': 'switchgear_manager_pro.action_switchgear_stock_incoming',
                 'icon': 'fa-truck',
             },
             {
@@ -166,7 +166,7 @@ class SwitchgearDashboard(models.AbstractModel):
                 'value': Picking.search_count(cd('stock.picking') + [
                     ('picking_type_code', '=', 'outgoing'), ('state', 'not in', ('done', 'cancel')),
                 ]),
-                'action_xmlid': 'switchgear_saaskul.action_switchgear_stock_outgoing',
+                'action_xmlid': 'switchgear_manager_pro.action_switchgear_stock_outgoing',
                 'icon': 'fa-send',
             },
         ]
@@ -200,10 +200,10 @@ class SwitchgearDashboard(models.AbstractModel):
             'items': [
                 self._item('Job estimates — draft', Estimate.search_count(cd('switchgear.estimate') + [
                     ('state', '=', 'draft'),
-                ]), 'switchgear_saaskul.action_job_estimate', 'pending'),
+                ]), 'switchgear_manager_pro.action_job_estimate', 'pending'),
                 self._item('Job estimates — awaiting approval', Estimate.search_count(cd('switchgear.estimate') + [
                     ('state', 'in', ('confirmed', 'approved')),
-                ]), 'switchgear_saaskul.action_job_estimate', 'progress'),
+                ]), 'switchgear_manager_pro.action_job_estimate', 'progress'),
                 self._item('Quotations to confirm', SO.search_count(cd('sale.order') + [
                     ('state', 'in', ('draft', 'sent')),
                 ]), 'sale.action_quotations_with_onboarding', 'pending'),
@@ -220,7 +220,7 @@ class SwitchgearDashboard(models.AbstractModel):
             self._item(
                 'Design documents',
                 Design.search_count(cd('switchgear.design.document')),
-                'switchgear_saaskul.action_switchgear_design_document',
+                'switchgear_manager_pro.action_switchgear_design_document',
                 'progress',
             ),
             self._item('Bill of materials', BOM.search_count(cd('mrp.bom')), 'mrp.mrp_bom_form_action', 'progress'),
@@ -247,7 +247,7 @@ class SwitchgearDashboard(models.AbstractModel):
                 Req.search_count(cd('switchgear.purchase.requisition') + [
                     ('state', 'not in', ('cancel', 'po_created')),
                 ]),
-                'switchgear_saaskul.action_material_purchase_requisition',
+                'switchgear_manager_pro.action_material_purchase_requisition',
                 'pending',
             ),
         )
@@ -263,7 +263,7 @@ class SwitchgearDashboard(models.AbstractModel):
         sections[-1]['items'].append(
             self._item('Quality alerts open', QA.search_count(cd('switchgear.quality.alert') + [
                 ('stage_id.done', '=', False),
-            ]), 'switchgear_saaskul.quality_alert_team_action', 'pending'),
+            ]), 'switchgear_manager_pro.quality_alert_team_action', 'pending'),
         )
 
         PO = self.env['purchase.order'].sudo()
@@ -281,10 +281,10 @@ class SwitchgearDashboard(models.AbstractModel):
                 ]), 'purchase.purchase_form_action', 'progress'),
                 self._item('GRN — to receive', Picking.search_count(cd('stock.picking') + [
                     ('picking_type_code', '=', 'incoming'), ('state', 'not in', ('done', 'cancel')),
-                ]), 'switchgear_saaskul.action_switchgear_stock_incoming', 'pending'),
+                ]), 'switchgear_manager_pro.action_switchgear_stock_incoming', 'pending'),
                 self._item('Delivery — to ship', Picking.search_count(cd('stock.picking') + [
                     ('picking_type_code', '=', 'outgoing'), ('state', 'not in', ('done', 'cancel')),
-                ]), 'switchgear_saaskul.action_switchgear_stock_outgoing', 'pending'),
+                ]), 'switchgear_manager_pro.action_switchgear_stock_outgoing', 'pending'),
             ],
         })
 
@@ -323,19 +323,19 @@ class SwitchgearDashboard(models.AbstractModel):
                 self._item(
                     'Design registers',
                     DesignDoc.search_count(cd('switchgear.design.document')),
-                    'switchgear_saaskul.action_switchgear_design_document',
+                    'switchgear_manager_pro.action_switchgear_design_document',
                     'progress',
                 ),
                 self._item(
                     'Documents sent (lines)',
                     self.env['switchgear.design.document.sent.line'].sudo().search_count([]),
-                    'switchgear_saaskul.action_switchgear_design_document',
+                    'switchgear_manager_pro.action_switchgear_design_document',
                     'pending',
                 ),
                 self._item(
                     'Documents received (lines)',
                     self.env['switchgear.design.document.received.line'].sudo().search_count([]),
-                    'switchgear_saaskul.action_switchgear_design_document',
+                    'switchgear_manager_pro.action_switchgear_design_document',
                     'pending',
                 ),
             ],

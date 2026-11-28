@@ -304,7 +304,7 @@ class CoaIfrsCoding(models.AbstractModel):
     @tools.ormcache('self.env.cr.dbname')
     def _seed_structure_rows(self):
         path = get_module_resource(
-            'chart_of_accounts_saaskul',
+            'smart_coa_builder',
             'data',
             'coa_seed',
             'account_group_type.csv',

@@ -7,10 +7,10 @@ from odoo import api, SUPERUSER_ID
 _logger = logging.getLogger(__name__)
 
 _MIGRATION_KEYS = {
-    'creators': 'field_service_saaskul.hook_fsm_creators_v1',
-    'deliveries': 'field_service_saaskul.hook_delivery_partners_v1',
-    'crn_analytic': 'field_service_saaskul.hook_crn_analytic_v1',
-    'data_xml': 'field_service_saaskul.hook_data_xml_v1',
+    'creators': 'field_service_hub.hook_fsm_creators_v1',
+    'deliveries': 'field_service_hub.hook_delivery_partners_v1',
+    'crn_analytic': 'field_service_hub.hook_crn_analytic_v1',
+    'data_xml': 'field_service_hub.hook_data_xml_v1',
 }
 
 
@@ -72,7 +72,7 @@ def _mark_migration_done(env, key):
 def pre_init_hook(env):
     cr = env.cr
     try:
-        import odoo.addons.field_service_saaskul.models.project_task_quotation_display  # noqa: F401
+        import odoo.addons.field_service_hub.models.project_task_quotation_display  # noqa: F401
     except Exception:
         _logger.exception(
             'FSM quotation display model could not be pre-loaded during install.'

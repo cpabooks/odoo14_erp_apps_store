@@ -75,8 +75,8 @@
         <field name="name">VAR Work Statement</field>
         <field name="model">saaskul.var.print.wizard</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">facility_management_saaskul.report_var_followup_template</field>
-        <field name="report_file">facility_management_saaskul.report_var_followup_template</field>
+        <field name="report_name">facility_ops_manager.report_var_followup_template</field>
+        <field name="report_file">facility_ops_manager.report_var_followup_template</field>
         <field name="print_report_name">'VAR_Work_Statement'</field>
         <field name="paperformat_id" ref="paperformat_a4_landscape"/>
     </record>

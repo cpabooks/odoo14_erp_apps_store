@@ -134,7 +134,7 @@ class FaffMisWizard(models.TransientModel):
                 domain.append(("salesperson_id", "=", self.salesperson_id.id))
             records = self.env["saaskul.faff.stage.history"].search(domain)
             return self.env.ref(
-                "fire_alarm_saaskul.action_report_faff_mis_daily"
+                "fire_alarm_manager.action_report_faff_mis_daily"
             ).report_action(records)
         if self.report_kind == "comparison_detail":
             jobs = self.env["saaskul.faff.job"].search(self._job_domain())
@@ -142,11 +142,11 @@ class FaffMisWizard(models.TransientModel):
                 [("job_id", "in", jobs.ids)]
             )
             return self.env.ref(
-                "fire_alarm_saaskul.action_report_faff_mis_detail"
+                "fire_alarm_manager.action_report_faff_mis_detail"
             ).report_action(lines)
         jobs = self.env["saaskul.faff.job"].search(self._job_domain())
         return self.env.ref(
-            "fire_alarm_saaskul.action_report_faff_mis_summary"
+            "fire_alarm_manager.action_report_faff_mis_summary"
         ).report_action(jobs)
 
 

@@ -9,7 +9,7 @@
                 <button name="action_start_faff_process" type="object"
                         string="Start FAFF Process"
                         class="oe_highlight"
-                        groups="fire_alarm_saaskul.group_faff_user"/>
+                        groups="fire_alarm_manager.group_faff_user"/>
             </xpath>
             <field name="user_id" position="after">
                 <field name="faff_job_id" readonly="1"/>

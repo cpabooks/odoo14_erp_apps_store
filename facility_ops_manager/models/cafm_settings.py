@@ -17,17 +17,17 @@ class ResConfigSettings(models.TransientModel):
     def get_values(self):
         res = super().get_values()
         icp = self.env['ir.config_parameter'].sudo()
-        priority = icp.get_param('facility_management_saaskul.default_priority_id')
+        priority = icp.get_param('facility_ops_manager.default_priority_id')
         res.update(
             cafm_default_priority_id=int(priority) if priority else False,
-            cafm_company_title=icp.get_param('facility_management_saaskul.company_title') or '',
-            cafm_enable_department_security=icp.get_param('facility_management_saaskul.enable_department_security') == 'True',
+            cafm_company_title=icp.get_param('facility_ops_manager.company_title') or '',
+            cafm_enable_department_security=icp.get_param('facility_ops_manager.enable_department_security') == 'True',
         )
         return res
 
     def set_values(self):
         super().set_values()
         icp = self.env['ir.config_parameter'].sudo()
-        icp.set_param('facility_management_saaskul.default_priority_id', self.cafm_default_priority_id.id or '')
-        icp.set_param('facility_management_saaskul.company_title', self.cafm_company_title or '')
-        icp.set_param('facility_management_saaskul.enable_department_security', self.cafm_enable_department_security)
+        icp.set_param('facility_ops_manager.default_priority_id', self.cafm_default_priority_id.id or '')
+        icp.set_param('facility_ops_manager.company_title', self.cafm_company_title or '')
+        icp.set_param('facility_ops_manager.enable_department_security', self.cafm_enable_department_security)

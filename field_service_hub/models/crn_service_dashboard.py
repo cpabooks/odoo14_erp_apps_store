@@ -5,18 +5,18 @@ from odoo.tools.safe_eval import safe_eval
 
 _TERMINAL_STAGES = ('job_completed', 'job_completed_invoiced', 'approved')
 _OPEN_STAGE_DOMAIN = [('fsm_stage_group', 'not in', list(_TERMINAL_STAGES))]
-_TASK_ACTION = 'field_service_saaskul.crn_task_action_all'
-_ANALYSIS_ACTION = 'field_service_saaskul.action_fsm_task_analysis_monitor'
+_TASK_ACTION = 'field_service_hub.crn_task_action_all'
+_ANALYSIS_ACTION = 'field_service_hub.action_fsm_task_analysis_monitor'
 _DASHBOARD_ACTION_XMLIDS = (
     _TASK_ACTION,
     _ANALYSIS_ACTION,
-    'field_service_saaskul.crn_task_action_my',
-    'field_service_saaskul.action_fsm_project_task_to_invoice',
-    'field_service_saaskul.action_fsm_project_task_to_quotation_issue',
-    'field_service_saaskul.action_fsm_store_material_request_pending',
-    'field_service_saaskul.action_fsm_store_do_pending',
-    'field_service_saaskul.action_fsm_store_do_issued',
-    'field_service_saaskul.action_fsm_timesheet_analysis_monitor',
+    'field_service_hub.crn_task_action_my',
+    'field_service_hub.action_fsm_project_task_to_invoice',
+    'field_service_hub.action_fsm_project_task_to_quotation_issue',
+    'field_service_hub.action_fsm_store_material_request_pending',
+    'field_service_hub.action_fsm_store_do_pending',
+    'field_service_hub.action_fsm_store_do_issued',
+    'field_service_hub.action_fsm_timesheet_analysis_monitor',
 )
 _WORKFLOW_NEXT_STAGE = {
     'registered': 'site_visited',
@@ -228,7 +228,7 @@ class CrnServiceDashboard(models.AbstractModel):
                            self._stage_domain('registered')),
                 self._item('CRNs - open (all stages)', len(open_tasks), _TASK_ACTION, 'progress', open_domain),
                 self._item('My CRNs', Task.search_count(self._my_crn_domain(open_domain)),
-                           'field_service_saaskul.crn_task_action_my', 'progress', self._my_crn_domain(open_domain)),
+                           'field_service_hub.crn_task_action_my', 'progress', self._my_crn_domain(open_domain)),
             ],
         })
 
@@ -240,7 +240,7 @@ class CrnServiceDashboard(models.AbstractModel):
                 self._item('Site visited', len(site_visited_tasks), _TASK_ACTION, 'progress',
                            self._stage_domain('site_visited')),
                 self._item('Quotation issued', len(quotation_issued_tasks),
-                           'field_service_saaskul.action_fsm_project_task_to_quotation_issue', 'pending',
+                           'field_service_hub.action_fsm_project_task_to_quotation_issue', 'pending',
                            self._stage_domain('qty_issued')),
                 self._item('Quotation approved', len(quotation_approved_tasks), _TASK_ACTION, 'progress',
                            self._stage_domain('qty_approved')),
@@ -265,7 +265,7 @@ class CrnServiceDashboard(models.AbstractModel):
                 self._item(
                     'Material request lines',
                     Line.search_count([('task_id', '!=', False)]),
-                    'field_service_saaskul.action_fsm_store_material_request_pending',
+                    'field_service_hub.action_fsm_store_material_request_pending',
                     'pending',
                 ),
             )
@@ -276,7 +276,7 @@ class CrnServiceDashboard(models.AbstractModel):
             'theme': 'billing',
             'items': [
                 self._item('Waiting for invoice', len(waiting_invoice_tasks),
-                           'field_service_saaskul.action_fsm_project_task_to_invoice', 'pending',
+                           'field_service_hub.action_fsm_project_task_to_invoice', 'pending',
                            self._fsm_base_domain() + [('fsm_stage_group', '=', 'waiting_for_invoice')]),
                 self._item('Job completed (FOC)', len(foc_tasks), _TASK_ACTION, 'progress',
                            self._fsm_base_domain() + [('fsm_stage_group', '=', 'job_completed')]),
@@ -299,11 +299,11 @@ class CrnServiceDashboard(models.AbstractModel):
                 self._item('Delivery - pending', Picking.search_count(cd + [
                     ('picking_type_code', '=', 'outgoing'),
                     ('state', 'not in', ('done', 'cancel')),
-                ]), 'field_service_saaskul.action_fsm_store_do_pending', 'pending'),
+                ]), 'field_service_hub.action_fsm_store_do_pending', 'pending'),
                 self._item('Delivery - done', Picking.search_count(cd + [
                     ('picking_type_code', '=', 'outgoing'),
                     ('state', '=', 'done'),
-                ]), 'field_service_saaskul.action_fsm_store_do_issued', 'progress'),
+                ]), 'field_service_hub.action_fsm_store_do_issued', 'progress'),
             ],
         })
 
@@ -315,7 +315,7 @@ class CrnServiceDashboard(models.AbstractModel):
                 self._item('Timesheet lines (FSM)', self.env['account.analytic.line'].sudo().search_count([
                     ('task_id.is_fsm', '=', True),
                     ('company_id', 'in', [False, self.env.company.id]),
-                ]), 'field_service_saaskul.action_fsm_timesheet_analysis_monitor', 'progress'),
+                ]), 'field_service_hub.action_fsm_timesheet_analysis_monitor', 'progress'),
                 self._item('CRN task analysis', len(tasks), _ANALYSIS_ACTION, 'progress', []),
             ],
         })

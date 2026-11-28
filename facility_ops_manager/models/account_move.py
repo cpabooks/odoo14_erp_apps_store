@@ -61,7 +61,7 @@ class AccountMove(models.Model):
             ctx['group_by'] = ['invoice_date:year']
         else:
             ctx.pop('group_by', None)
-        action = self.env.ref('facility_management_saaskul.action_saaskul_cafm_amc_invoices').read()[0]
+        action = self.env.ref('facility_ops_manager.action_saaskul_cafm_amc_invoices').read()[0]
         action['context'] = ctx
         action['domain'] = self._cafm_default_amc_invoice_domain()
         return action
@@ -75,7 +75,7 @@ class AccountMove(models.Model):
         })
         if ctx.get('cafm_yearly_view_on'):
             ctx['group_by'] = ['invoice_date:year']
-        action = self.env.ref('facility_management_saaskul.action_saaskul_cafm_amc_invoices').read()[0]
+        action = self.env.ref('facility_ops_manager.action_saaskul_cafm_amc_invoices').read()[0]
         action['context'] = ctx
         action['domain'] = self._cafm_default_amc_invoice_domain()
         return action
@@ -85,8 +85,8 @@ class AccountMove(models.Model):
         today = fields.Date.context_today(self)
         last_end = today.replace(day=1) - relativedelta(days=1)
         last_start = last_end.replace(day=1)
-        action = self.env.ref('facility_management_saaskul.action_saaskul_cafm_amc_invoices').read()[0]
-        tree_id = self.env.ref('facility_management_saaskul.view_cafm_amc_customer_invoice_tree').id
+        action = self.env.ref('facility_ops_manager.action_saaskul_cafm_amc_invoices').read()[0]
+        tree_id = self.env.ref('facility_ops_manager.view_cafm_amc_customer_invoice_tree').id
         action['view_mode'] = 'tree,form'
         action['views'] = [(tree_id, 'list'), (False, 'form')]
         action['view_id'] = tree_id

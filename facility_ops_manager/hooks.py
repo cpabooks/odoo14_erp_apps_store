@@ -25,7 +25,7 @@ def reload_python_module(module_name):
 
 def post_init_hook(env):
     cr = env.cr
-    manager_group = env.ref('facility_management_saaskul.group_cafm_manager', raise_if_not_found=False)
+    manager_group = env.ref('facility_ops_manager.group_cafm_manager', raise_if_not_found=False)
     if manager_group:
         users = env['res.users'].with_context(active_test=False).search([('share', '=', False)])
         manager_group.write({'user_ids': [(4, user.id) for user in users]})

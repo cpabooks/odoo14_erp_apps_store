@@ -1,6 +1,6 @@
 from odoo import api, fields, models, _
-from odoo.addons.re_sequences_saaskul.models.sequence_format import build_format_preview_html
-from odoo.addons.re_sequences_saaskul.models.saaskul_module_checks import (
+from odoo.addons.smart_sequence_engine.models.sequence_format import build_format_preview_html
+from odoo.addons.smart_sequence_engine.models.saaskul_module_checks import (
     MRP_SEQUENCE_FOR,
     mrp_installed,
 )

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
-    <t t-name="switchgear_saaskul.SgShell">
+    <t t-name="switchgear_manager_pro.SgShell">
         <aside t-if="shell.active" class="o_switchgear_services_sidebar d-print-none">
             <div class="o_switchgear_app_sidebar">
                 <div class="o_switchgear_app_sidebar_title">Switchgear</div>
@@ -18,7 +18,7 @@
         </aside>
     </t>
 
-    <t t-name="switchgear_saaskul.SgDashboard">
+    <t t-name="switchgear_manager_pro.SgDashboard">
         <div class="o_action o_switchgear_dashboard_main h-100 overflow-auto">
             <div class="o_switchgear_dashboard_root">
                 <div class="o_sg_dash_header">
@@ -61,7 +61,7 @@
         </div>
     </t>
 
-    <t t-name="switchgear_saaskul.SgProcessingCycle">
+    <t t-name="switchgear_manager_pro.SgProcessingCycle">
         <div class="o_action o_sg_processing_cycle_root h-100 overflow-auto">
             <div class="o_sg_cycle_header text-center mb-3">
                 <h2>Switchgear processing cycle</h2>
@@ -103,7 +103,7 @@
         </div>
     </t>
 
-    <t t-name="switchgear_saaskul.SgFlowchartHome">
+    <t t-name="switchgear_manager_pro.SgFlowchartHome">
         <div class="o_action o_switchgear_flowchart_root h-100 overflow-auto">
             <div class="o_switchgear_home_header">
                 <h2>Switchgear workflow</h2>
@@ -141,7 +141,7 @@
         </div>
     </t>
 
-    <t t-name="switchgear_saaskul.SgTutorialProgressHtml">
+    <t t-name="switchgear_manager_pro.SgTutorialProgressHtml">
         <div class="o_field_sg_tutorial_progress_html"><t t-if="html" t-out="html"/></div>
     </t>
 </templates>

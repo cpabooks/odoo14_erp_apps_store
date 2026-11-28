@@ -1,34 +1,34 @@
 /** @odoo-module ignore */
-(window.__cafmLegacyQueue = window.__cafmLegacyQueue || []).push(["facility_management_saaskul.CafmGuide", function (require) {
+(window.__cafmLegacyQueue = window.__cafmLegacyQueue || []).push(["facility_ops_manager.CafmGuide", function (require) {
     "use strict";
 
     var AbstractAction = require("web.AbstractAction");
     var core = require("web.core");
 
     var AMC_STEPS = [
-        {step: 1, label: "Client / Project", xmlid: "facility_management_saaskul.action_saaskul_cafm_projects", theme: "contract"},
-        {step: 2, label: "Create AMC Contract", xmlid: "facility_management_saaskul.action_saaskul_cafm_amc", theme: "contract"},
-        {step: 3, label: "Setup SLA", xmlid: "facility_management_saaskul.action_saaskul_cafm_priority", theme: "ops"},
-        {step: 4, label: "PPM Setup", xmlid: "facility_management_saaskul.action_cafm_ppm_setup_wizard", theme: "ops"},
-        {step: 5, label: "Generate PPM", xmlid: "facility_management_saaskul.action_cafm_ppm_generate_wizard", theme: "ops"},
-        {step: 6, label: "AMC Call", xmlid: "facility_management_saaskul.action_cafm_amc_call_form", theme: "ops"},
-        {step: 7, label: "Stock Issue", xmlid: "facility_management_saaskul.action_cafm_stock_issue_amc", theme: "materials"},
-        {step: 8, label: "Cont. Order / Billing", xmlid: "facility_management_saaskul.action_saaskul_cafm_contract_orders", theme: "billing"},
-        {step: 9, label: "Invoice", xmlid: "facility_management_saaskul.action_saaskul_cafm_amc_invoices", theme: "billing"},
-        {step: 10, label: "Client SOA", xmlid: "facility_management_saaskul.action_cafm_client_soa_single_project", theme: "billing"},
+        {step: 1, label: "Client / Project", xmlid: "facility_ops_manager.action_saaskul_cafm_projects", theme: "contract"},
+        {step: 2, label: "Create AMC Contract", xmlid: "facility_ops_manager.action_saaskul_cafm_amc", theme: "contract"},
+        {step: 3, label: "Setup SLA", xmlid: "facility_ops_manager.action_saaskul_cafm_priority", theme: "ops"},
+        {step: 4, label: "PPM Setup", xmlid: "facility_ops_manager.action_cafm_ppm_setup_wizard", theme: "ops"},
+        {step: 5, label: "Generate PPM", xmlid: "facility_ops_manager.action_cafm_ppm_generate_wizard", theme: "ops"},
+        {step: 6, label: "AMC Call", xmlid: "facility_ops_manager.action_cafm_amc_call_form", theme: "ops"},
+        {step: 7, label: "Stock Issue", xmlid: "facility_ops_manager.action_cafm_stock_issue_amc", theme: "materials"},
+        {step: 8, label: "Cont. Order / Billing", xmlid: "facility_ops_manager.action_saaskul_cafm_contract_orders", theme: "billing"},
+        {step: 9, label: "Invoice", xmlid: "facility_ops_manager.action_saaskul_cafm_amc_invoices", theme: "billing"},
+        {step: 10, label: "Client SOA", xmlid: "facility_ops_manager.action_cafm_client_soa_single_project", theme: "billing"},
     ];
 
     var VAR_STEPS = [
         {step: 1, label: "Create Quotation", xmlid: "sale.action_quotations_with_onboarding", theme: "contract"},
-        {step: 2, label: "Create Project", xmlid: "facility_management_saaskul.action_saaskul_cafm_projects", theme: "contract"},
-        {step: 3, label: "Stock Issue", xmlid: "facility_management_saaskul.action_cafm_stock_issue_var", theme: "materials"},
+        {step: 2, label: "Create Project", xmlid: "facility_ops_manager.action_saaskul_cafm_projects", theme: "contract"},
+        {step: 3, label: "Stock Issue", xmlid: "facility_ops_manager.action_cafm_stock_issue_var", theme: "materials"},
         {step: 4, label: "Direct Purchase", xmlid: "purchase.purchase_rfq", theme: "materials"},
         {step: 5, label: "Invoice", xmlid: "account.action_move_out_invoice_type", theme: "billing"},
     ];
 
     function syncShell() {
         try {
-            require("facility_management_saaskul.shell").requestSyncSidebar(true);
+            require("facility_ops_manager.shell").requestSyncSidebar(true);
         } catch (e) {
             // optional
         }
@@ -45,7 +45,7 @@
 
     var CafmHowItWorks = AbstractAction.extend({
         contentTemplate: "SaaskulCafmHowItWorks",
-        xmlDependencies: ["/facility_management_saaskul/static/src/xml/cafm_guide.xml"],
+        xmlDependencies: ["/facility_ops_manager/static/src/xml/cafm_guide.xml"],
         events: {
             "click .o_cafm_flow_node": "_onNodeClick",
             "click .o_cafm_cycle_node": "_onNodeClick",

@@ -1,5 +1,5 @@
 /** @odoo-module ignore */
-(window.__cafmLegacyQueue = window.__cafmLegacyQueue || []).push(["facility_management_saaskul.CafmDashboard", function (require) {
+(window.__cafmLegacyQueue = window.__cafmLegacyQueue || []).push(["facility_ops_manager.CafmDashboard", function (require) {
     "use strict";
 
     var AbstractAction = require("web.AbstractAction");
@@ -7,7 +7,7 @@
 
     var CafmDashboard = AbstractAction.extend({
         contentTemplate: "SaaskulCafmDashboard",
-        xmlDependencies: ["/facility_management_saaskul/static/src/xml/cafm_dashboard_main.xml"],
+        xmlDependencies: ["/facility_ops_manager/static/src/xml/cafm_dashboard_main.xml"],
         THEME_KEY: "cpa_cafm_dashboard_theme",
         events: {
             "click .o_cfd_dash_kpi": "_onDrillClick",
@@ -30,12 +30,12 @@
             this.set("title", "CAFM Operations Dashboard");
             return this._super.apply(this, arguments).then(function () {
                 try {
-                    require("facility_management_saaskul.shell").requestSyncSidebar(true);
+                    require("facility_ops_manager.shell").requestSyncSidebar(true);
                 } catch (error) {
                     // shell loads globally; dashboard still works without it
                 }
                 try {
-                    var UiTheme = require("facility_management_saaskul.ui_theme");
+                    var UiTheme = require("facility_ops_manager.ui_theme");
                     self._theme = UiTheme.syncShellTheme();
                     UiTheme.applyUiTheme(self._theme);
                     UiTheme.syncNavbarToggleState();
@@ -60,7 +60,7 @@
 
         _readStoredTheme: function () {
             try {
-                return require("facility_management_saaskul.ui_theme").readTheme();
+                return require("facility_ops_manager.ui_theme").readTheme();
             } catch (e) {
                 return "default";
             }
@@ -68,7 +68,7 @@
 
         _applyTheme: function (theme) {
             try {
-                this._theme = require("facility_management_saaskul.ui_theme").applyUiTheme(theme);
+                this._theme = require("facility_ops_manager.ui_theme").applyUiTheme(theme);
             } catch (e) {
                 this._theme = theme === "dark" ? "dark" : "default";
             }
@@ -85,7 +85,7 @@
 
         _injectNavbarThemeToggle: function () {
             try {
-                require("facility_management_saaskul.ui_theme").injectNavbarThemeToggle();
+                require("facility_ops_manager.ui_theme").injectNavbarThemeToggle();
             } catch (e) { /* ignore */ }
         },
 
@@ -111,7 +111,7 @@
             }.bind(this)).guardedCatch(function (error) {
                 this._setLoadError(
                     error.message ||
-                        "Dashboard data could not be loaded. Upgrade facility_management_saaskul and restart Odoo."
+                        "Dashboard data could not be loaded. Upgrade facility_ops_manager and restart Odoo."
                 );
             }.bind(this)).finally(function () {
                 this._setLoading(false);
@@ -279,7 +279,7 @@
             }).guardedCatch(function (error) {
                 self.$(".o_cfd_chart_canvas_wrap").html(
                     $("<p class='cfd_load_error'/>").text(
-                        (error && error.message) || "Charts unavailable. Hard-refresh the browser after upgrading facility_management_saaskul."
+                        (error && error.message) || "Charts unavailable. Hard-refresh the browser after upgrading facility_ops_manager."
                     )
                 );
             });

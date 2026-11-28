@@ -25,7 +25,7 @@ function letterColor(name) {
 }
 
 export class AppSidebar extends Component {
-    static template = "app_sidebar_saaskul.AppSidebar";
+    static template = "side_menu_navigator.AppSidebar";
     static props = {};
 
     setup() {
@@ -113,7 +113,7 @@ export class AppSidebar extends Component {
     }
 }
 
-registry.category("main_components").add("app_sidebar_saaskul.AppSidebar", {
+registry.category("main_components").add("side_menu_navigator.AppSidebar", {
     Component: AppSidebar,
 });
 
@@ -124,9 +124,9 @@ patch(NavBar.prototype, {
     },
 });
 
-registry.category("user_menuitems").add("app_sidebar_saaskul_default_menu", () => ({
+registry.category("user_menuitems").add("side_menu_navigator_default_menu", () => ({
     type: "item",
-    id: "app_sidebar_saaskul_default_menu",
+    id: "side_menu_navigator_default_menu",
     description: "Default menu",
     callback: toggleDefaultMenu,
     sequence: 69,

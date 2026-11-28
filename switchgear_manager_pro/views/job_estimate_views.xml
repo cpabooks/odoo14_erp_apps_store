@@ -22,7 +22,7 @@
                         <button class="oe_stat_button" name="action_view_quotations" type="object" icon="fa-file-text-o" invisible="quotation_count == 0">
                             <field string="Quotations" name="quotation_count" widget="statinfo"/>
                         </button>
-                        <button class="oe_stat_button" name="%(switchgear_saaskul.action_mrp_bom_from_job_estimation)d" type="action" icon="fa-flask">
+                        <button class="oe_stat_button" name="%(switchgear_manager_pro.action_mrp_bom_from_job_estimation)d" type="action" icon="fa-flask">
                             <field string="Bill of Materials" name="bom_count" widget="statinfo"/>
                         </button>
                     </div>

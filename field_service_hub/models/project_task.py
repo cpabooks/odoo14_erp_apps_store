@@ -1377,7 +1377,7 @@ class ProjectTask(models.Model):
 
     def _fsm_workflow_reload_form_action(self):
         self.ensure_one()
-        action = self.env.ref('field_service_saaskul.crn_task_action_my').read()[0]
+        action = self.env.ref('field_service_hub.crn_task_action_my').read()[0]
         action['views'] = [(False, 'form')]
         action['res_id'] = self.id
         action['target'] = 'current'
@@ -2675,7 +2675,7 @@ class ProjectTask(models.Model):
     def action_view_material_returns(self):
         self.ensure_one()
         action = self.env["ir.actions.actions"]._for_xml_id(
-            "field_service_saaskul.action_material_return"
+            "field_service_hub.action_material_return"
         )
         action.update({
             'domain': [('issue_project_task_id', '=', self.id), ('is_material_return', '=', True)],
@@ -3250,7 +3250,7 @@ class ProjectTask(models.Model):
             ))
         name = self.task_seq or self.display_name
         self.with_context(**{CPABOOKS_FSM_CRN_MUTATION_CTX: True}).unlink()
-        action = self.env.ref('field_service_saaskul.crn_task_action_all', raise_if_not_found=False)
+        action = self.env.ref('field_service_hub.crn_task_action_all', raise_if_not_found=False)
         if action:
             result = action.read()[0]
             result.setdefault('params', {})

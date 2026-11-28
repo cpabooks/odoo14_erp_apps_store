@@ -491,7 +491,7 @@ class SwitchgearTutorialWizard(models.TransientModel):
         if not self.mo_id:
             return _('No MO yet — skipped QC.')
         team = self.env['switchgear.quality.team'].sudo()._get_default_team(self.company_id)
-        test_type = self.env.ref('switchgear_saaskul.test_type_passfail', raise_if_not_found=False)
+        test_type = self.env.ref('switchgear_manager_pro.test_type_passfail', raise_if_not_found=False)
         vals = {
             'product_id': self.finished_product_id.id or self.mo_id.product_id.id,
             'production_id': self.mo_id.id,

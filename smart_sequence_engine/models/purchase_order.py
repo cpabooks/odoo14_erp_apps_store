@@ -6,7 +6,7 @@ import pytz
 
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
-from odoo.addons.re_sequences_saaskul.models.sequence_format import replace_prefix_placeholders
+from odoo.addons.smart_sequence_engine.models.sequence_format import replace_prefix_placeholders
 
 
 class PurchaseOrderInheritance(models.Model):

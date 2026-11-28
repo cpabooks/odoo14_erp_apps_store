@@ -49,19 +49,19 @@ class FaffDashboard(models.AbstractModel):
                     cd("saaskul.faff.job")
                     + [("stage", "not in", ("done", "cancel")), ("active", "=", True)]
                 ),
-                "action_xmlid": "fire_alarm_saaskul.action_faff_job",
+                "action_xmlid": "fire_alarm_manager.action_faff_job",
                 "icon": "fa-fire",
             },
             {
                 "label": "Inspections",
                 "value": Visit.search_count(cd("saaskul.faff.visit")),
-                "action_xmlid": "fire_alarm_saaskul.action_faff_visit",
+                "action_xmlid": "fire_alarm_manager.action_faff_visit",
                 "icon": "fa-map-marker",
             },
             {
                 "label": "Estimations",
                 "value": Est.search_count(cd("saaskul.faff.estimate")),
-                "action_xmlid": "fire_alarm_saaskul.action_faff_estimate",
+                "action_xmlid": "fire_alarm_manager.action_faff_estimate",
                 "icon": "fa-calculator",
             },
             {
@@ -85,7 +85,7 @@ class FaffDashboard(models.AbstractModel):
             {
                 "label": "Material Plans",
                 "value": Mat.search_count(cd("saaskul.faff.material.plan")),
-                "action_xmlid": "fire_alarm_saaskul.action_faff_material",
+                "action_xmlid": "fire_alarm_manager.action_faff_material",
                 "icon": "fa-cubes",
             },
             {
@@ -94,7 +94,7 @@ class FaffDashboard(models.AbstractModel):
                     cd("saaskul.faff.testing")
                     + [("system_status", "in", ("failed", "rectification"))]
                 ),
-                "action_xmlid": "fire_alarm_saaskul.action_faff_testing",
+                "action_xmlid": "fire_alarm_manager.action_faff_testing",
                 "icon": "fa-check-circle",
             },
             {
@@ -114,7 +114,7 @@ class FaffDashboard(models.AbstractModel):
             {
                 "label": "Handovers",
                 "value": Comp.search_count(cd("saaskul.faff.completion")),
-                "action_xmlid": "fire_alarm_saaskul.action_faff_completion",
+                "action_xmlid": "fire_alarm_manager.action_faff_completion",
                 "icon": "fa-handshake-o",
             },
         ]
@@ -152,7 +152,7 @@ class FaffDashboard(models.AbstractModel):
                     self._item(
                         "Jobs at CRM stage",
                         Job.search_count(cd("saaskul.faff.job") + [("stage", "=", "crm")]),
-                        "fire_alarm_saaskul.action_faff_job",
+                        "fire_alarm_manager.action_faff_job",
                         "pending",
                     ),
                 ],
@@ -165,7 +165,7 @@ class FaffDashboard(models.AbstractModel):
                     self._item(
                         "Site inspections",
                         Visit.search_count(cd("saaskul.faff.visit")),
-                        "fire_alarm_saaskul.action_faff_visit",
+                        "fire_alarm_manager.action_faff_visit",
                         "progress",
                     ),
                     self._item(
@@ -174,7 +174,7 @@ class FaffDashboard(models.AbstractModel):
                             cd("saaskul.faff.estimate")
                             + [("state", "in", ("draft", "saved"))]
                         ),
-                        "fire_alarm_saaskul.action_faff_estimate",
+                        "fire_alarm_manager.action_faff_estimate",
                         "pending",
                     ),
                     self._item(
@@ -183,7 +183,7 @@ class FaffDashboard(models.AbstractModel):
                             cd("saaskul.faff.estimate")
                             + [("state", "in", ("approved", "done"))]
                         ),
-                        "fire_alarm_saaskul.action_faff_estimate",
+                        "fire_alarm_manager.action_faff_estimate",
                         "progress",
                     ),
                     self._item(
@@ -192,7 +192,7 @@ class FaffDashboard(models.AbstractModel):
                             cd("saaskul.faff.job")
                             + [("stage", "in", ("inspection", "estimation"))]
                         ),
-                        "fire_alarm_saaskul.action_faff_job",
+                        "fire_alarm_manager.action_faff_job",
                         "pending",
                     ),
                 ],
@@ -232,7 +232,7 @@ class FaffDashboard(models.AbstractModel):
                             cd("saaskul.faff.job")
                             + [("stage", "in", ("quotation", "confirmed"))]
                         ),
-                        "fire_alarm_saaskul.action_faff_job",
+                        "fire_alarm_manager.action_faff_job",
                         "progress",
                     ),
                 ],
@@ -248,13 +248,13 @@ class FaffDashboard(models.AbstractModel):
                             cd("saaskul.faff.job")
                             + [("stage", "in", ("project", "material", "execution"))]
                         ),
-                        "fire_alarm_saaskul.action_faff_job",
+                        "fire_alarm_manager.action_faff_job",
                         "progress",
                     ),
                     self._item(
                         "Material requirements",
                         Mat.search_count(cd("saaskul.faff.material.plan")),
-                        "fire_alarm_saaskul.action_faff_material",
+                        "fire_alarm_manager.action_faff_material",
                         "pending",
                     ),
                     self._item(
@@ -284,7 +284,7 @@ class FaffDashboard(models.AbstractModel):
                             cd("saaskul.faff.testing")
                             + [("system_status", "in", ("passed", "passed_remarks"))]
                         ),
-                        "fire_alarm_saaskul.action_faff_testing",
+                        "fire_alarm_manager.action_faff_testing",
                         "progress",
                     ),
                     self._item(
@@ -293,7 +293,7 @@ class FaffDashboard(models.AbstractModel):
                             cd("saaskul.faff.testing")
                             + [("system_status", "in", ("failed", "rectification"))]
                         ),
-                        "fire_alarm_saaskul.action_faff_testing",
+                        "fire_alarm_manager.action_faff_testing",
                         "pending",
                     ),
                     self._item(
@@ -301,7 +301,7 @@ class FaffDashboard(models.AbstractModel):
                         Comp.search_count(
                             cd("saaskul.faff.completion") + [("state", "=", "draft")]
                         ),
-                        "fire_alarm_saaskul.action_faff_completion",
+                        "fire_alarm_manager.action_faff_completion",
                         "pending",
                     ),
                     self._item(
@@ -309,7 +309,7 @@ class FaffDashboard(models.AbstractModel):
                         Comp.search_count(
                             cd("saaskul.faff.completion") + [("state", "=", "confirmed")]
                         ),
-                        "fire_alarm_saaskul.action_faff_completion",
+                        "fire_alarm_manager.action_faff_completion",
                         "progress",
                     ),
                 ],
@@ -352,7 +352,7 @@ class FaffDashboard(models.AbstractModel):
                             cd("saaskul.faff.job")
                             + [("stage", "in", ("invoice", "payment"))]
                         ),
-                        "fire_alarm_saaskul.action_faff_job",
+                        "fire_alarm_manager.action_faff_job",
                         "pending",
                     ),
                     self._item(
@@ -360,7 +360,7 @@ class FaffDashboard(models.AbstractModel):
                         Job.search_count(
                             cd("saaskul.faff.job") + [("stage", "=", "done")]
                         ),
-                        "fire_alarm_saaskul.action_faff_job",
+                        "fire_alarm_manager.action_faff_job",
                         "progress",
                     ),
                     self._item(

@@ -40,13 +40,13 @@ class SwitchgearQualityTeam(models.Model):
         return action
 
     def action_open_checks(self):
-        return self._action_for_team('switchgear_saaskul.quality_check_action_main')
+        return self._action_for_team('switchgear_manager_pro.quality_check_action_main')
 
     def action_open_todo_checks(self):
-        return self._action_for_team('switchgear_saaskul.quality_check_action_main', [('quality_state', '=', 'none')])
+        return self._action_for_team('switchgear_manager_pro.quality_check_action_main', [('quality_state', '=', 'none')])
 
     def action_open_alerts(self):
-        return self._action_for_team('switchgear_saaskul.quality_alert_action')
+        return self._action_for_team('switchgear_manager_pro.quality_alert_action')
 
     @api.model
     def _get_default_team(self, company=None):
@@ -98,7 +98,7 @@ class SwitchgearQualityCheck(models.Model):
 
     @api.model
     def _default_test_type(self):
-        return (self.env.ref('switchgear_saaskul.test_type_passfail', raise_if_not_found=False)
+        return (self.env.ref('switchgear_manager_pro.test_type_passfail', raise_if_not_found=False)
                 or self.env['switchgear.quality.test.type'].search([], limit=1))
 
     @api.model_create_multi
@@ -153,7 +153,7 @@ class SwitchgearQualityCheck(models.Model):
 
     def action_view_alerts(self):
         self.ensure_one()
-        action = self.env['ir.actions.actions']._for_xml_id('switchgear_saaskul.quality_alert_action')
+        action = self.env['ir.actions.actions']._for_xml_id('switchgear_manager_pro.quality_alert_action')
         action['domain'] = [('check_id', '=', self.id)]
         action['context'] = {'default_check_id': self.id, 'default_team_id': self.team_id.id,
                              'default_product_id': self.product_id.id}

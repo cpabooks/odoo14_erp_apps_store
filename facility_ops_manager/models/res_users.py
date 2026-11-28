@@ -13,7 +13,7 @@ class ResUsers(models.Model):
 
     @api.model
     def _saaskul_cafm_assign_manager_group(self):
-        manager_group = self.env.ref('facility_management_saaskul.group_cafm_manager', raise_if_not_found=False)
+        manager_group = self.env.ref('facility_ops_manager.group_cafm_manager', raise_if_not_found=False)
         if manager_group:
             users = self.with_context(active_test=False).search([('share', '=', False)])
             manager_group.write({'user_ids': [(4, user.id) for user in users]})

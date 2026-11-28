@@ -15,7 +15,7 @@ class Account(models.Model):
 
     def _register_hook(self):
         super()._register_hook()
-        from odoo.addons.chart_of_accounts_saaskul.hooks import (
+        from odoo.addons.smart_coa_builder.hooks import (
             _ensure_account_account_cpabooks_columns,
         )
         _ensure_account_account_cpabooks_columns(self.env.cr)
@@ -1502,7 +1502,7 @@ class Account(models.Model):
     def delete_wizard(self):
         """Open Factory Reset wizard (coa.create). Tolerate missing xmlids on restored DBs."""
         action = self.env.ref(
-            "chart_of_accounts_saaskul.coa_create_form_action",
+            "smart_coa_builder.coa_create_form_action",
             raise_if_not_found=False,
         )
         if action:
@@ -1521,7 +1521,7 @@ class Account(models.Model):
         )
         if orphan:
             self._cpabooks_ensure_xmlid(
-                "chart_of_accounts_saaskul.coa_create_form_action",
+                "smart_coa_builder.coa_create_form_action",
                 orphan,
             )
             result = orphan.read()[0]
@@ -1536,7 +1536,7 @@ class Account(models.Model):
             }
         if view:
             self._cpabooks_ensure_xmlid(
-                "chart_of_accounts_saaskul.coa_create_form",
+                "smart_coa_builder.coa_create_form",
                 view,
             )
             result["view_id"] = view.id

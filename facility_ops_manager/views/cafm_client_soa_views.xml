@@ -117,8 +117,8 @@
         <field name="name">Client SOA - Single Project</field>
         <field name="model">saaskul.cafm.contract</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">facility_management_saaskul.rpt_cafm_client_soa</field>
-        <field name="report_file">facility_management_saaskul.rpt_cafm_client_soa</field>
+        <field name="report_name">facility_ops_manager.rpt_cafm_client_soa</field>
+        <field name="report_file">facility_ops_manager.rpt_cafm_client_soa</field>
         <field name="print_report_name">'Client_SOA_%s' % (object.name or 'Statement')</field>
         <!-- SOA print stays on Client SOA list/form buttons; avoid dead Print menu on AMC form -->
         <field name="binding_model_id" eval="False"/>

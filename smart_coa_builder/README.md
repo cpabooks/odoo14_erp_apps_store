@@ -9,6 +9,6 @@ Odoo 14 store package for IFRS-style chart structure:
 - Opening balance journal with retained-earnings offset
 - Merge and delete unused ledgers
 
-Technical name: `chart_of_accounts_saaskul`
+Technical name: `smart_coa_builder`
 
 Community and Enterprise. No Enterprise module required.

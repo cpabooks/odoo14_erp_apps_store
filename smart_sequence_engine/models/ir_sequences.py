@@ -120,7 +120,7 @@ class SequenceInheritance(models.Model):
                 'All document sequences are locked. Select rows and use Lock / Unlock '
                 '(or uncheck Locked), then run Reset Company Prefix.',
             ))
-        return self.env.ref('re_sequences_saaskul.set_company_prefix_wizard').read()[0]
+        return self.env.ref('smart_sequence_engine.set_company_prefix_wizard').read()[0]
 
     # is_journals=fields.Boolean(string="IS Journal Entries Sequences")
     sequence_pattern=fields.Selection([
@@ -307,8 +307,8 @@ class SequenceInheritance(models.Model):
         'number_next_actual',
     )
     def _compute_sequence_pattern_example(self):
-        from odoo.addons.re_sequences_saaskul.models.sequence_format import build_sequence_number
-        from odoo.addons.re_sequences_saaskul.models.set_company_prefix import (
+        from odoo.addons.smart_sequence_engine.models.sequence_format import build_sequence_number
+        from odoo.addons.smart_sequence_engine.models.set_company_prefix import (
             SAASKUL_SEQUENCE_DEFINITIONS,
         )
         code_by_for = {row[0]: row[2] for row in SAASKUL_SEQUENCE_DEFINITIONS}
@@ -998,7 +998,7 @@ class SequenceInheritance(models.Model):
 
         if normalized_date:
             next_number = seq_id.number_next_actual
-            from odoo.addons.re_sequences_saaskul.models.sequence_format import replace_prefix_placeholders
+            from odoo.addons.smart_sequence_engine.models.sequence_format import replace_prefix_placeholders
             seq_prefix = replace_prefix_placeholders(
                 seq_id.prefix or "",
                 normalized_date,
@@ -1089,7 +1089,7 @@ class SequenceInheritance(models.Model):
             # If already a `date` object, no need to parse
             date_obj = field_date
 
-        from odoo.addons.re_sequences_saaskul.models.sequence_format import replace_prefix_placeholders
+        from odoo.addons.smart_sequence_engine.models.sequence_format import replace_prefix_placeholders
         seq_prefix = replace_prefix_placeholders(
             seq_prefix, date_obj, seq_id._saaskul_year_digits(),
         )

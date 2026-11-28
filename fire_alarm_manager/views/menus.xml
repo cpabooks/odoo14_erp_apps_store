@@ -2,10 +2,10 @@
 <odoo>
     <menuitem id="menu_faff_root"
               name="FAFF"
-              web_icon="fire_alarm_saaskul,static/description/icon.png"
+              web_icon="fire_alarm_manager,static/description/icon.png"
               action="action_faff_dashboard_client"
               sequence="25"
-              groups="fire_alarm_saaskul.group_faff_user"/>
+              groups="fire_alarm_manager.group_faff_user"/>
 
     <menuitem id="menu_faff_dashboard_folder"
               name="Dashboard"
@@ -321,7 +321,7 @@
               name="Configuration"
               parent="menu_faff_root"
               sequence="90"
-              groups="fire_alarm_saaskul.group_faff_manager"/>
+              groups="fire_alarm_manager.group_faff_manager"/>
 
     <menuitem id="menu_faff_job_types"
               name="Job Types"
@@ -340,12 +340,12 @@
               parent="menu_faff_config"
               action="action_faff_load_demo"
               sequence="90"
-              groups="fire_alarm_saaskul.group_faff_manager"/>
+              groups="fire_alarm_manager.group_faff_manager"/>
 
     <menuitem id="menu_faff_clean_demo"
               name="Clean Demo Data"
               parent="menu_faff_config"
               action="action_faff_clean_demo"
               sequence="91"
-              groups="fire_alarm_saaskul.group_faff_manager"/>
+              groups="fire_alarm_manager.group_faff_manager"/>
 </odoo>

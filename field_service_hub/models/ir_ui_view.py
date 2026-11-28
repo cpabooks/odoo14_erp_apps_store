@@ -58,7 +58,7 @@ class IrUiView(models.Model):
         if len(xmlids) == 1 and isinstance(xmlids[0], (list, tuple, set)):
             xmlids = xmlids[0]
 
-        module = 'field_service_saaskul'
+        module = 'field_service_hub'
         names = [
             xmlid.split('.', 1)[1] if '.' in xmlid else xmlid
             for xmlid in (xmlids or [])

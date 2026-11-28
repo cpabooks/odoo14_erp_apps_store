@@ -106,7 +106,7 @@ class MrpProduction(models.Model):
 
     def action_view_quality_checks(self):
         self.ensure_one()
-        action = self.env['ir.actions.actions']._for_xml_id('switchgear_saaskul.quality_check_action_mo')
+        action = self.env['ir.actions.actions']._for_xml_id('switchgear_manager_pro.quality_check_action_mo')
         action['domain'] = [('production_id', '=', self.id)]
         action['context'] = dict(self.env.context, default_production_id=self.id)
         return action
@@ -114,7 +114,7 @@ class MrpProduction(models.Model):
     def action_create_qc(self):
         Check = self.env['switchgear.quality.check']
         team = self.env['switchgear.quality.team']._get_default_team()
-        test_type = self.env.ref('switchgear_saaskul.test_type_passfail', raise_if_not_found=False)
+        test_type = self.env.ref('switchgear_manager_pro.test_type_passfail', raise_if_not_found=False)
         for rec in self:
             vals = {
                 'product_id': rec.product_id.id,

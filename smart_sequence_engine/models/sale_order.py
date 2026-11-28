@@ -10,7 +10,7 @@ class SaleOrderInheritance(models.Model):
 
     def _saaskul_sequence_year_str(self, date_val, company=None):
         """Year segment for document names (2- or 4-digit per company setting)."""
-        from odoo.addons.re_sequences_saaskul.models.sequence_format import format_year
+        from odoo.addons.smart_sequence_engine.models.sequence_format import format_year
         company = company or self.env.company
         digits = getattr(company, 'saaskul_sequence_year_digits', None) or '4'
         if isinstance(date_val, datetime):

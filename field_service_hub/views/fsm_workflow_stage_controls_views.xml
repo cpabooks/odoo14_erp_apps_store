@@ -5,7 +5,7 @@
         <record id="view_fsm_project_task_form_workflow_stage_controls" model="ir.ui.view">
             <field name="name">fsm.project.task.form.workflow.stage.controls</field>
             <field name="model">project.task</field>
-            <field name="inherit_id" ref="field_service_saaskul.view_fsm_project_task_form_view_inherit"/>
+            <field name="inherit_id" ref="field_service_hub.view_fsm_project_task_form_view_inherit"/>
             <field name="priority">35</field>
             <field name="arch" type="xml">
 

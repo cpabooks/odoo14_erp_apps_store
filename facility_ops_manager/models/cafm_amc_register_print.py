@@ -276,7 +276,7 @@ class CafmAmcNextInvoicePrintWizard(models.TransientModel):
                 'extra': self._filter_extra_label(),
             })
         return self.env.ref(
-            'facility_management_saaskul.action_report_cafm_next_invoice_list'
+            'facility_ops_manager.action_report_cafm_next_invoice_list'
         ).report_action(
             contracts,
             data={
@@ -765,7 +765,7 @@ class CafmContractNextInvoicePrint(models.Model):
                 wizard.month_key = value
                 break
         view = self.env.ref(
-            'facility_management_saaskul.view_cafm_amc_next_invoice_print_wizard_form',
+            'facility_ops_manager.view_cafm_amc_next_invoice_print_wizard_form',
             raise_if_not_found=False,
         )
         return {
@@ -824,7 +824,7 @@ class CafmContractNextInvoicePrint(models.Model):
 
 
 class ReportCafmNextInvoiceList(models.AbstractModel):
-    _name = 'report.facility_management_saaskul.rpt_cafm_next_inv'
+    _name = 'report.facility_ops_manager.rpt_cafm_next_inv'
     _description = 'AMC Contracts To be Invoiced Report'
 
     @api.model

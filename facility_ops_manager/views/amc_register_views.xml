@@ -146,9 +146,9 @@
                                 <field name="customer_trn"/>
                                 <field name="contact_person_id"/>
                                 <field name="contact_no"/>
-                                <field name="client_manager_id" context="{'cafm_quick_user': 1, 'form_view_ref': 'facility_management_saaskul.view_users_simple_form_cafm_optional_email'}"/>
-                                <field name="gfs_supervisor_id" context="{'cafm_quick_user': 1, 'form_view_ref': 'facility_management_saaskul.view_users_simple_form_cafm_optional_email'}"/>
-                                <field name="gfs_admin_id" context="{'cafm_quick_user': 1, 'form_view_ref': 'facility_management_saaskul.view_users_simple_form_cafm_optional_email'}"/>
+                                <field name="client_manager_id" context="{'cafm_quick_user': 1, 'form_view_ref': 'facility_ops_manager.view_users_simple_form_cafm_optional_email'}"/>
+                                <field name="gfs_supervisor_id" context="{'cafm_quick_user': 1, 'form_view_ref': 'facility_ops_manager.view_users_simple_form_cafm_optional_email'}"/>
+                                <field name="gfs_admin_id" context="{'cafm_quick_user': 1, 'form_view_ref': 'facility_ops_manager.view_users_simple_form_cafm_optional_email'}"/>
                                 <field name="project_id"/>
                                 <field name="unit_id" invisible="1"/>
                                 <field name="unit_contract_type" string="Villa / Flat"/>
@@ -244,7 +244,7 @@
                                                   string="Tenant Name"
                                                   options="{'no_quick_create': True}"
                                                   context="{
-                                                      'form_view_ref': 'facility_management_saaskul.view_saaskul_cafm_unit_form',
+                                                      'form_view_ref': 'facility_ops_manager.view_saaskul_cafm_unit_form',
                                                       'default_project_id': parent.project_id,
                                                       'default_unit_type': contract_type,
                                                   }"/>

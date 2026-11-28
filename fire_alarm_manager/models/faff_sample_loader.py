@@ -78,7 +78,7 @@ class FaffSampleLoader(models.TransientModel):
 
     def _job_type(self, xml_suffix):
         return self.env.ref(
-            "fire_alarm_saaskul.%s" % xml_suffix, raise_if_not_found=False
+            "fire_alarm_manager.%s" % xml_suffix, raise_if_not_found=False
         ) or self.env["saaskul.faff.job.type"].search([], limit=1)
 
     def _create_estimate(self, job, product, uom, approved=True):

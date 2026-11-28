@@ -265,4 +265,4 @@ class CafmVarPrintWizard(models.TransientModel):
         }
 
     def action_print_pdf(self):
-        return self.env.ref('facility_management_saaskul.action_report_var_followup').report_action(self)
+        return self.env.ref('facility_ops_manager.action_report_var_followup').report_action(self)

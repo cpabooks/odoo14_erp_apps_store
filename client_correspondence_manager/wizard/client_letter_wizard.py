@@ -166,7 +166,7 @@ class ClientLetterWizard(models.TransientModel):
 
     def action_print_pdf(self):
         self.ensure_one()
-        return self.env.ref("client_letter_saaskul.action_report_client_letter").report_action(self)
+        return self.env.ref("client_correspondence_manager.action_report_client_letter").report_action(self)
 
     def action_send_email(self):
         self.ensure_one()

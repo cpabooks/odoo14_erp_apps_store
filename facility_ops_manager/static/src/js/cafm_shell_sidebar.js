@@ -1,5 +1,5 @@
 /** @odoo-module ignore */
-(window.__cafmLegacyQueue = window.__cafmLegacyQueue || []).push(["facility_management_saaskul.shell", function (require) {
+(window.__cafmLegacyQueue = window.__cafmLegacyQueue || []).push(["facility_ops_manager.shell", function (require) {
     "use strict";
 
     /**
@@ -34,7 +34,7 @@
         if (hash.indexOf("model=account.move") >= 0 && isNavbarCafmBrand()) {
             return true;
         }
-        if (document.querySelector(".o_main_navbar [data-menu-xmlid^='facility_management_saaskul.']")) {
+        if (document.querySelector(".o_main_navbar [data-menu-xmlid^='facility_ops_manager.']")) {
             return true;
         }
         return isNavbarCafmBrand();

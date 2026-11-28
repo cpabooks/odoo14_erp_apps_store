@@ -38,7 +38,7 @@ def post_init_hook(env):
     ])
     if still:
         _logger.info(
-            "cancel_delete_saaskul: uninstalling old cancel apps: %s",
+            "cancel_delete_manager: uninstalling old cancel apps: %s",
             ", ".join(still.mapped("name")),
         )
         still.button_uninstall()

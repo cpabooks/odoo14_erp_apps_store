@@ -266,7 +266,7 @@ class AccountMoveCafmTallyInvoice(models.Model):
 
 
 class ReportCafmInvoiceTally(models.AbstractModel):
-    _name = 'report.facility_management_saaskul.rpt_cafm_inv_tally'
+    _name = 'report.facility_ops_manager.rpt_cafm_inv_tally'
     _description = 'Print Invoice (Tally Format)'
 
     @api.model

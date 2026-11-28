@@ -29,7 +29,7 @@ class CrmLead(models.Model):
             lead.estimation_count = len(lead.job_estimate_ids)
 
     def button_new_estimation(self):
-        action = self.env["ir.actions.actions"]._for_xml_id("switchgear_saaskul.action_new_estimation")
+        action = self.env["ir.actions.actions"]._for_xml_id("switchgear_manager_pro.action_new_estimation")
         action['context'] = {
             'search_default_opportunity_id': self.id,
             'default_opportunity_id': self.id,
@@ -38,13 +38,13 @@ class CrmLead(models.Model):
         return action
 
     def action_view_estimation(self):
-        action = self.env["ir.actions.actions"]._for_xml_id("switchgear_saaskul.action_job_estimate")
+        action = self.env["ir.actions.actions"]._for_xml_id("switchgear_manager_pro.action_job_estimate")
         action['context'] = {
             'default_opportunity_id': self.id,
             'default_partner_id': self.partner_id.id,
         }
         action['domain'] = [('opportunity_id', '=', self.id)]
         if len(self.job_estimate_ids) == 1:
-            action['views'] = [(self.env.ref('switchgear_saaskul.job_estimate_form_view').id, 'form')]
+            action['views'] = [(self.env.ref('switchgear_manager_pro.job_estimate_form_view').id, 'form')]
             action['res_id'] = self.job_estimate_ids.id
         return action

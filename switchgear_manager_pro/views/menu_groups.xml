@@ -7,7 +7,7 @@
         </record>
         <!-- Anyone with Internal User also gets Show Flowchart App (legacy group). -->
         <record id="base.group_user" model="res.groups">
-            <field name="implied_ids" eval="[(4, ref('switchgear_saaskul.group_flowchart'))]"/>
+            <field name="implied_ids" eval="[(4, ref('switchgear_manager_pro.group_flowchart'))]"/>
         </record>
     </data>
 </odoo>

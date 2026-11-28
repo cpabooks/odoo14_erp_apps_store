@@ -21,7 +21,7 @@ const FLOW_ROWS = [
                     "Job Type (FA / FF)",
                     "Sales Person",
                 ],
-                xmlid: "fire_alarm_saaskul.action_faff_crm",
+                xmlid: "fire_alarm_manager.action_faff_crm",
             },
             {
                 n: 2,
@@ -37,7 +37,7 @@ const FLOW_ROWS = [
                     "Photos",
                     "Recommendation",
                 ],
-                xmlid: "fire_alarm_saaskul.action_faff_visit",
+                xmlid: "fire_alarm_manager.action_faff_visit",
             },
             {
                 n: 3,
@@ -53,7 +53,7 @@ const FLOW_ROWS = [
                     "Margin %",
                     "Selling Price",
                 ],
-                xmlid: "fire_alarm_saaskul.action_faff_estimate",
+                xmlid: "fire_alarm_manager.action_faff_estimate",
             },
             {
                 n: 4,
@@ -68,7 +68,7 @@ const FLOW_ROWS = [
                     "Attach BOQ",
                     "Send to Customer",
                 ],
-                xmlid: "fire_alarm_saaskul.action_faff_quotations",
+                xmlid: "fire_alarm_manager.action_faff_quotations",
             },
             {
                 n: 5,
@@ -81,7 +81,7 @@ const FLOW_ROWS = [
                     "Confirm Sale Order",
                     "Convert to Project",
                 ],
-                xmlid: "fire_alarm_saaskul.action_faff_confirmed_orders",
+                xmlid: "fire_alarm_manager.action_faff_confirmed_orders",
             },
         ],
         [
@@ -97,7 +97,7 @@ const FLOW_ROWS = [
                     "Assign Engineer",
                     "Planned Dates",
                 ],
-                xmlid: "fire_alarm_saaskul.action_faff_projects",
+                xmlid: "fire_alarm_manager.action_faff_projects",
             },
             {
                 n: 7,
@@ -110,7 +110,7 @@ const FLOW_ROWS = [
                     "In Stock → Issue",
                     "Not in Stock → RFQ / PO",
                 ],
-                xmlid: "fire_alarm_saaskul.action_faff_material",
+                xmlid: "fire_alarm_manager.action_faff_material",
             },
             {
                 n: 8,
@@ -124,7 +124,7 @@ const FLOW_ROWS = [
                     "Progress Photos",
                     "Site Updates",
                 ],
-                xmlid: "fire_alarm_saaskul.action_faff_execution_jobs",
+                xmlid: "fire_alarm_manager.action_faff_execution_jobs",
             },
             {
                 n: 9,
@@ -137,7 +137,7 @@ const FLOW_ROWS = [
                     "Alarm & Cause-Effect",
                     "Pass or Rectification",
                 ],
-                xmlid: "fire_alarm_saaskul.action_faff_testing",
+                xmlid: "fire_alarm_manager.action_faff_testing",
             },
         ],
         [
@@ -153,7 +153,7 @@ const FLOW_ROWS = [
                     "Handover Note",
                     "Warranty",
                 ],
-                xmlid: "fire_alarm_saaskul.action_faff_completion",
+                xmlid: "fire_alarm_manager.action_faff_completion",
             },
             {
                 n: 11,
@@ -166,7 +166,7 @@ const FLOW_ROWS = [
                     "Post Invoice",
                     "Link to FAFF Job",
                 ],
-                xmlid: "fire_alarm_saaskul.action_faff_invoices",
+                xmlid: "fire_alarm_manager.action_faff_invoices",
             },
             {
                 n: 12,
@@ -179,7 +179,7 @@ const FLOW_ROWS = [
                     "Full or Partial",
                     "Update Job Balance",
                 ],
-                xmlid: "fire_alarm_saaskul.action_faff_payments",
+                xmlid: "fire_alarm_manager.action_faff_payments",
             },
             {
                 n: 13,
@@ -192,13 +192,13 @@ const FLOW_ROWS = [
                     "Mark job Finished",
                     "Archive / Close",
                 ],
-                xmlid: "fire_alarm_saaskul.action_faff_job_closed",
+                xmlid: "fire_alarm_manager.action_faff_job_closed",
             },
         ],
     ];
 
 export class FaffDashboard extends Component {
-    static template = "fire_alarm_saaskul.FaffDashboard";
+    static template = "fire_alarm_manager.FaffDashboard";
     static props = ["*"];
 
     setup() {
@@ -222,7 +222,7 @@ export class FaffDashboard extends Component {
 }
 
 export class FaffProcessFlow extends Component {
-    static template = "fire_alarm_saaskul.FaffProcessFlow";
+    static template = "fire_alarm_manager.FaffProcessFlow";
     static props = ["*"];
 
     setup() {
@@ -237,7 +237,7 @@ export class FaffProcessFlow extends Component {
     }
 
     startJob() {
-        this.action.doAction("fire_alarm_saaskul.action_faff_job_wizard");
+        this.action.doAction("fire_alarm_manager.action_faff_job_wizard");
     }
 }
 

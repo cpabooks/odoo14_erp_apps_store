@@ -3,19 +3,19 @@
 
 
 # class SaaskulSequences(http.Controller):
-#     @http.route('/re_sequences_saaskul/re_sequences_saaskul/', auth='public')
+#     @http.route('/smart_sequence_engine/smart_sequence_engine/', auth='public')
 #     def index(self, **kw):
 #         return "Hello, world"
 
-#     @http.route('/re_sequences_saaskul/re_sequences_saaskul/objects/', auth='public')
+#     @http.route('/smart_sequence_engine/smart_sequence_engine/objects/', auth='public')
 #     def list(self, **kw):
-#         return http.request.render('re_sequences_saaskul.listing', {
-#             'root': '/re_sequences_saaskul/re_sequences_saaskul',
-#             'objects': http.request.env['re_sequences_saaskul.re_sequences_saaskul'].search([]),
+#         return http.request.render('smart_sequence_engine.listing', {
+#             'root': '/smart_sequence_engine/smart_sequence_engine',
+#             'objects': http.request.env['smart_sequence_engine.smart_sequence_engine'].search([]),
 #         })
 
-#     @http.route('/re_sequences_saaskul/re_sequences_saaskul/objects/<model("re_sequences_saaskul.re_sequences_saaskul"):obj>/', auth='public')
+#     @http.route('/smart_sequence_engine/smart_sequence_engine/objects/<model("smart_sequence_engine.smart_sequence_engine"):obj>/', auth='public')
 #     def object(self, obj, **kw):
-#         return http.request.render('re_sequences_saaskul.object', {
+#         return http.request.render('smart_sequence_engine.object', {
 #             'object': obj
 #         })

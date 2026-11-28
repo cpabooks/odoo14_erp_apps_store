@@ -319,13 +319,13 @@ class COACreate(models.Model):
 
     def _default_csv(self):
         coa_csv_path = get_module_resource(
-            'chart_of_accounts_saaskul', 'data/coa_seed', 'account.account.csv',
+            'smart_coa_builder', 'data/coa_seed', 'account.account.csv',
         )
         group_csv_path = get_module_resource(
-            'chart_of_accounts_saaskul', 'data/coa_seed', 'account.group.csv',
+            'smart_coa_builder', 'data/coa_seed', 'account.group.csv',
         )
         not_delete_csv_path = get_module_resource(
-            'chart_of_accounts_saaskul', 'data/coa_seed', 'account_group_type.csv',
+            'smart_coa_builder', 'data/coa_seed', 'account_group_type.csv',
         )
         self.coa_csv_file = base64.b64encode(open(coa_csv_path, 'rb').read())
         self.group_csv_file = base64.b64encode(open(group_csv_path, 'rb').read())

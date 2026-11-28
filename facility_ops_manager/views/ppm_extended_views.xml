@@ -3,7 +3,7 @@
     <record id="view_saaskul_cafm_ppm_tree_ext" model="ir.ui.view">
         <field name="name">saaskul.cafm.ppm.tree.planning</field>
         <field name="model">saaskul.cafm.ppm</field>
-        <field name="inherit_id" ref="facility_management_saaskul.view_saaskul_cafm_ppm_tree"/>
+        <field name="inherit_id" ref="facility_ops_manager.view_saaskul_cafm_ppm_tree"/>
         <field name="arch" type="xml">
             <field name="project_id" position="after">
                 <field name="supervisor_id" optional="show"/>
@@ -19,7 +19,7 @@
     <record id="view_saaskul_cafm_ppm_form_ext" model="ir.ui.view">
         <field name="name">saaskul.cafm.ppm.form.planning</field>
         <field name="model">saaskul.cafm.ppm</field>
-        <field name="inherit_id" ref="facility_management_saaskul.view_saaskul_cafm_ppm_form"/>
+        <field name="inherit_id" ref="facility_ops_manager.view_saaskul_cafm_ppm_form"/>
         <field name="arch" type="xml">
             <xpath expr="//header" position="inside">
                 <button name="action_view_slots" type="object" string="Month slots" class="btn-secondary"/>

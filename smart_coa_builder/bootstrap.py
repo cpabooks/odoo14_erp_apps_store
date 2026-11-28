@@ -27,7 +27,7 @@ def patch_registry_schema_after_load():
     register_before_registry_hook(
         _coa_before_registry,
         priority=35,
-        owner='chart_of_accounts_saaskul',
+        owner='smart_coa_builder',
     )
 
 

@@ -95,7 +95,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//kanban" position="attributes">
                     <attribute name="string">CRNs</attribute>
-                    <attribute name="quick_create_view">field_service_saaskul.crn_task_view_quick_create</attribute>
+                    <attribute name="quick_create_view">field_service_hub.crn_task_view_quick_create</attribute>
                 </xpath>
             </field>
         </record>
@@ -210,7 +210,7 @@
         <!-- Menus -->
         <menuitem id="crn_menu_root"
                   name="Complaint Registration"
-                  web_icon="field_service_saaskul,static/description/icon.png"
+                  web_icon="field_service_hub,static/description/icon.png"
                   groups="group_crn_user"
                   sequence="57"/>
 

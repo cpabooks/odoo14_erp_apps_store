@@ -376,4 +376,4 @@ class CafmPpmDailyListWizard(models.TransientModel):
 
     def action_print_pdf(self):
         self.ensure_one()
-        return self.env.ref("facility_management_saaskul.action_report_cafm_ppm_daily_list").report_action(self)
+        return self.env.ref("facility_ops_manager.action_report_cafm_ppm_daily_list").report_action(self)

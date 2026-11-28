@@ -8,7 +8,7 @@ _MONTH_SHORT = {
 
 
 class ReportCafmPpmDaily(models.AbstractModel):
-    _name = "report.facility_management_saaskul.report_cafm_ppm_daily_list"
+    _name = "report.facility_ops_manager.report_cafm_ppm_daily_list"
     _description = "Technician daily PPM list (PDF)"
 
     @api.model

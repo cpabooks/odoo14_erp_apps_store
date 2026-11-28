@@ -28,9 +28,9 @@
             <form string="FAFF Job">
                 <header>
                     <button name="action_continue_wizard" type="object" string="Continue FAFF Process"
-                            class="oe_highlight" groups="fire_alarm_saaskul.group_faff_user"/>
+                            class="oe_highlight" groups="fire_alarm_manager.group_faff_user"/>
                     <button name="action_set_cancelled" type="object" string="Cancel"
-                            groups="fire_alarm_saaskul.group_faff_manager"
+                            groups="fire_alarm_manager.group_faff_manager"
                             confirm="Cancel this FAFF job?"/>
                     <field name="stage" widget="statusbar"
                              statusbar_visible="crm,inspection,estimation,quotation,confirmed,project,material,execution,testing,completion,invoice,payment,done"/>

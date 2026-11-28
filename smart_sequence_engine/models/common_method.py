@@ -3,7 +3,7 @@ from datetime import date, datetime, timedelta
 
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
-from odoo.addons.re_sequences_saaskul.models.sequence_format import format_year
+from odoo.addons.smart_sequence_engine.models.sequence_format import format_year
 
 
 class CommonMetthod(models.AbstractModel):
@@ -75,7 +75,7 @@ class CommonMetthod(models.AbstractModel):
         name_field=None, record_id=None, extra_domain=None,
     ):
         """Highest suffix for the active prefix/pattern/padding (not other patterns)."""
-        from odoo.addons.re_sequences_saaskul.models.sequence_format import (
+        from odoo.addons.smart_sequence_engine.models.sequence_format import (
             replace_prefix_placeholders,
         )
         name_field = name_field or self._saaskul_sequence_name_field(model)

@@ -43,8 +43,8 @@ Reverse and Confirm / Post. Works on Odoo 19 Community and Enterprise.
     ],
     'assets': {
         'web.assets_backend': [
-            'cancel_delete_saaskul/static/src/css/list_action_menu.css',
-            'cancel_delete_saaskul/static/src/js/cpa_cd_back.js',
+            'cancel_delete_manager/static/src/css/list_action_menu.css',
+            'cancel_delete_manager/static/src/js/cpa_cd_back.js',
         ],
     },
     'installable': True,

@@ -675,7 +675,7 @@ class FaffJob(models.Model):
     def action_manager_override_stage(self, to_stage, reason):
         """Allow FAFF Manager to skip stage with recorded reason."""
         self.ensure_one()
-        if not self.env.user.has_group("fire_alarm_saaskul.group_faff_manager"):
+        if not self.env.user.has_group("fire_alarm_manager.group_faff_manager"):
             raise UserError(_("Only FAFF Managers can override stages."))
         if not reason:
             raise UserError(_("Override reason is required."))
